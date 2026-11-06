@@ -1,0 +1,38 @@
+[0.010s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication -- -j16 -l16
+[0.025s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.171s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.188s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.194s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.203s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.212s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.255s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.255s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.298s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.348s] -- Found iris_msgs: 0.0.0 (/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake)
+[0.438s] -- Configuring done (0.4s)
+[0.450s] -- Generating done (0.0s)
+[0.453s] -- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication
+[0.478s] [ 50%] [32mBuilding CXX object CMakeFiles/udp_bridge_node.dir/src/udp_bridge_node.cpp.o[0m
+[5.692s] [100%] [32m[1mLinking CXX executable udp_bridge_node[0m
+[5.878s] [100%] Built target udp_bridge_node
+[5.885s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication' returned '0': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication -- -j16 -l16
+[5.891s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication
+[5.896s] -- Install configuration: ""
+[5.896s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/lib/communication/udp_bridge_node
+[5.899s] -- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/lib/communication/udp_bridge_node" to ""
+[5.899s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/ament_index/resource_index/package_run_dependencies/communication
+[5.899s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/ament_index/resource_index/parent_prefix_path/communication
+[5.899s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/environment/ament_prefix_path.sh
+[5.899s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/environment/ament_prefix_path.dsv
+[5.899s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/environment/path.sh
+[5.899s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/environment/path.dsv
+[5.899s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/local_setup.bash
+[5.899s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/local_setup.sh
+[5.900s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/local_setup.zsh
+[5.900s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/local_setup.dsv
+[5.900s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/package.dsv
+[5.900s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/ament_index/resource_index/packages/communication
+[5.900s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/cmake/communicationConfig.cmake
+[5.900s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/cmake/communicationConfig-version.cmake
+[5.900s] -- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/package.xml
+[5.902s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication' returned '0': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication

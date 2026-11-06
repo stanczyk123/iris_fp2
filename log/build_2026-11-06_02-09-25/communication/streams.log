@@ -1,0 +1,40 @@
+[0.011s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication': CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/altaaf-ihsan-latief/Desktop/iris_fp2/src/communication -DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication
+[0.019s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.156s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.161s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.179s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.185s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.193s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.202s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.244s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.245s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.286s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.333s] -- Found iris_msgs: 0.0.0 (/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake)
+[0.419s] -- Configuring done (0.4s)
+[0.427s] -- Generating done (0.0s)
+[0.430s] -- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication
+[0.436s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication' returned '0': CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/altaaf-ihsan-latief/Desktop/iris_fp2/src/communication -DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication
+[0.437s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication': CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication -- -j16 -l16
+[0.478s] [100%] Built target udp_bridge_node
+[0.485s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication' returned '0': CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication -- -j16 -l16
+[0.491s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication': CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication
+[0.496s] -- Install configuration: ""
+[0.496s] -- Execute custom install script
+[0.496s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/lib/communication/udp_bridge_node
+[0.496s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/lib/communication/fake_esp32.py
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/ament_index/resource_index/package_run_dependencies/communication
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/ament_index/resource_index/parent_prefix_path/communication
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/environment/ament_prefix_path.sh
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/environment/ament_prefix_path.dsv
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/environment/path.sh
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/environment/path.dsv
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/local_setup.bash
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/local_setup.sh
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/local_setup.zsh
+[0.497s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/local_setup.dsv
+[0.497s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/package.dsv
+[0.504s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/ament_index/resource_index/packages/communication
+[0.504s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/cmake/communicationConfig.cmake
+[0.504s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/cmake/communicationConfig-version.cmake
+[0.504s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication/share/communication/package.xml
+[0.505s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication' returned '0': CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication

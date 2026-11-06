@@ -1,0 +1,33 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/img/logotimkita.png
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/img/tim1.jpeg
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/img/tim2.jpeg
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/img/tim3.jpeg
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/index.html
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/index.js
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/program.css
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/program.html
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/program.js
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/web/style.css
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/ament_index/resource_index/package_run_dependencies/dashboard
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/ament_index/resource_index/parent_prefix_path/dashboard
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/environment/ament_prefix_path.sh
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/environment/ament_prefix_path.dsv
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/environment/path.sh
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/environment/path.dsv
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/local_setup.bash
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/local_setup.sh
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/local_setup.zsh
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/local_setup.dsv
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/package.dsv
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/ament_index/resource_index/packages/dashboard
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/cmake/dashboardConfig.cmake
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/cmake/dashboardConfig-version.cmake
+-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/dashboard/share/dashboard/package.xml

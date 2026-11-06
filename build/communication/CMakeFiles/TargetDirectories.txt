@@ -1,0 +1,10 @@
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/uninstall.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/communication_uninstall.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/udp_bridge_node.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/test.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/edit_cache.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/rebuild_cache.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/list_install_components.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/install.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/install/local.dir
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication/CMakeFiles/install/strip.dir

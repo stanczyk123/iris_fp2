@@ -1,0 +1,41 @@
+[0.013s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master -- -j16 -l16
+[0.052s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.193s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.229s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.281s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.288s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.299s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.310s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.358s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.359s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.405s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.458s] -- Found iris_msgs: 0.0.0 (/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake)
+[0.553s] -- Configuring done (0.5s)
+[0.569s] -- Generating done (0.0s)
+[0.573s] -- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master
+[0.621s] [ 50%] [32mBuilding CXX object CMakeFiles/master_node.dir/src/master_node.cpp.o[0m
+[9.520s] [100%] [32m[1mLinking CXX executable master_node[0m
+[9.842s] [100%] Built target master_node
+[9.849s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master' returned '0': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master -- -j16 -l16
+[9.854s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master
+[9.859s] -- Install configuration: ""
+[9.859s] -- Execute custom install script
+[9.859s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/lib/master/master_node
+[9.859s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/launch/iris_cup.launch.py
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/config/params.yaml
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/ament_index/resource_index/package_run_dependencies/master
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/ament_index/resource_index/parent_prefix_path/master
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/environment/ament_prefix_path.sh
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/environment/ament_prefix_path.dsv
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/environment/path.sh
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/environment/path.dsv
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/local_setup.bash
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/local_setup.sh
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/local_setup.zsh
+[9.860s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/local_setup.dsv
+[9.861s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/package.dsv
+[9.866s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/ament_index/resource_index/packages/master
+[9.866s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/cmake/masterConfig.cmake
+[9.866s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/cmake/masterConfig-version.cmake
+[9.866s] -- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/package.xml
+[9.867s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master' returned '0': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master

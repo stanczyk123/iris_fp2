@@ -1,0 +1,38 @@
+[0.036s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/altaaf-ihsan-latief/Desktop/iris_fp2/src/communication -DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication
+[0.058s] [33mCMake Warning (dev) in CMakeLists.txt:
+[0.059s]   No project() command is present.  The top-level CMakeLists.txt file must
+[0.059s]   contain a literal, direct call to the project() command.  Add a line of
+[0.060s]   code such as
+[0.060s] 
+[0.060s]     project(ProjectName)
+[0.061s] 
+[0.061s]   near the top of the file, but after cmake_minimum_required().
+[0.061s] 
+[0.062s]   CMake is pretending there is a "project(Project)" command on the first
+[0.062s]   line.
+[0.063s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.063s] [0m
+[0.064s] [33mCMake Warning (dev) in CMakeLists.txt:
+[0.064s]   cmake_minimum_required() should be called prior to this top-level project()
+[0.064s]   call.  Please see the cmake-commands(7) manual for usage documentation of
+[0.065s]   both commands.
+[0.065s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.066s] [0m
+[0.245s] -- The C compiler identification is GNU 13.3.0
+[0.467s] -- The CXX compiler identification is GNU 13.3.0
+[0.526s] -- Detecting C compiler ABI info
+[0.808s] -- Detecting C compiler ABI info - done
+[0.871s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.872s] -- Detecting C compile features
+[0.875s] -- Detecting C compile features - done
+[0.921s] -- Detecting CXX compiler ABI info
+[1.247s] -- Detecting CXX compiler ABI info - done
+[1.289s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.290s] -- Detecting CXX compile features
+[1.292s] -- Detecting CXX compile features - done
+[1.295s] -- Configuring done (1.2s)
+[1.298s] -- Generating done (0.0s)
+[1.301s] -- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication
+[1.312s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/altaaf-ihsan-latief/Desktop/iris_fp2/src/communication -DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication
+[1.316s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication -- -j16 -l16
+[1.425s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication -- -j16 -l16

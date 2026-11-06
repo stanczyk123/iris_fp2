@@ -1,0 +1,299 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #000;
+    color: #e8e8e8;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 14px;
+}
+
+/* ---------- Bar atas ---------- */
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 32px;
+    border-bottom: 1px solid #1c1c1c;
+    background: #000;
+}
+
+.logo {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover img { opacity: 0.7; }
+
+.judul h1 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.judul p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #7a7a7a;
+}
+
+.status {
+    margin-left: auto;
+    font-size: 13px;
+    color: #8a8a8a;
+}
+
+.status.ok     { color: #4ade80; }
+.status.gagal  { color: #f87171; }
+.status.proses { color: #facc15; }
+
+/* ---------- Tata letak ---------- */
+
+main {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 22px 32px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Tiga tahap pengolahan citra berdampingan */
+.video { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.tiga  { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+.kartu {
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    border-radius: 10px;
+    padding: 20px 22px 22px;
+}
+
+.kartu h2 {
+    margin: 0 0 18px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ---------- Form koneksi ---------- */
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.form select,
+.form input {
+    padding: 10px 12px;
+    background: #111;
+    color: #e8e8e8;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form select:focus,
+.form input:focus {
+    outline: none;
+    border-color: #4a4a4a;
+}
+
+.aksi { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn {
+    padding: 9px 20px;
+    font-size: 13px;
+    background: #141414;
+    color: #d8d8d8;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.18s ease;
+}
+
+.btn:hover { background: #1d1d1d; border-color: #3d3d3d; }
+.btn.utama  { background: #f2f2f2; color: #000; border-color: #f2f2f2; }
+.btn.utama:hover { background: #fff; }
+.btn.bahaya { background: #7f1d1d; color: #fff; border-color: #7f1d1d; }
+.btn.bahaya:hover { background: #991b1b; }
+.btn.kanan { margin-left: auto; }
+
+/* ---------- Panel video ---------- */
+
+.layar {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: #151515;
+    border-radius: 6px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.layar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+.layar img.tampil { display: block; }
+
+.menunggu {
+    position: absolute;
+    font-size: 13px;
+    color: #6a6a6a;
+}
+
+.kaki {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #7a7a7a;
+}
+
+.kaki b { color: #c8c8c8; font-weight: 500; }
+
+/* ---------- Gauge sudut kemudi ---------- */
+
+.gauge { text-align: center; }
+.gauge svg { width: 100%; max-width: 230px; }
+
+.gauge .alur {
+    fill: none;
+    stroke: #262626;
+    stroke-width: 13;
+    stroke-linecap: round;
+}
+
+.gauge .nilai {
+    fill: none;
+    stroke: #4ade80;
+    stroke-width: 13;
+    stroke-linecap: round;
+    stroke-dasharray: 251.3;
+    stroke-dashoffset: 251.3;
+    transition: stroke-dashoffset 0.15s linear, stroke 0.25s ease;
+}
+
+.gauge .jarum {
+    stroke: #f2f2f2;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    transform-origin: 100px 100px;
+    transition: transform 0.15s linear;
+}
+
+.gauge .poros { fill: #f2f2f2; }
+
+.gauge .angka {
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: -6px;
+    font-variant-numeric: tabular-nums;
+}
+
+.gauge .ket {
+    font-size: 12px;
+    color: #7a7a7a;
+    margin-top: 4px;
+}
+
+/* ---------- Baris data ---------- */
+
+.item { margin-bottom: 16px; }
+
+.item .label {
+    display: block;
+    font-size: 12px;
+    color: #8a8a8a;
+    margin-bottom: 6px;
+}
+
+.besar {
+    font-size: 22px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.pil {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    background: #1d1d1d;
+    color: #9a9a9a;
+}
+
+.pil.hijau  { background: #14532d; color: #4ade80; }
+.pil.kuning { background: #422006; color: #facc15; }
+.pil.merah  { background: #450a0a; color: #f87171; }
+
+.bar_tipis {
+    height: 4px;
+    background: #1d1d1d;
+    border-radius: 999px;
+    overflow: hidden;
+    margin: -8px 0 16px;
+}
+
+.bar_tipis i {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #4ade80;
+    transition: width 0.25s ease, background 0.25s ease;
+}
+
+/* ---------- Log ---------- */
+
+.log {
+    max-height: 190px;
+    overflow-y: auto;
+    font-family: ui-monospace, "Cascadia Code", Menlo, monospace;
+    font-size: 12.5px;
+    line-height: 1.9;
+}
+
+.log div { border-bottom: 1px solid #141414; padding: 2px 0; }
+.log .waktu { color: #6a6a6a; margin-right: 10px; }
+.log .node  { color: #a78bfa; }
+.log .info  { color: #60a5fa; }
+.log .ok    { color: #4ade80; }
+.log .warn  { color: #facc15; }
+.log .bad   { color: #f87171; }
+
+@media (max-width: 1200px) {
+    .video { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 860px) {
+    .video { grid-template-columns: 1fr; }
+    .tiga  { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX Lab Base Station</title>
+    <link rel="stylesheet" href="program.css">
+    <link rel="icon" type="image/x-icon" href="img/logotimkita.png">
+</head>
+<body>
+
+<header class="bar">
+    <a class="logo" href="index.html" title="Kembali ke beranda">
+        <img src="img/logotimkita.png" alt="MAX LAB">
+    </a>
+    <div class="judul">
+        <h1>MAX Lab Base Station</h1>
+        <p>Lane Detection Monitor</p>
+    </div>
+    <span class="status" id="status">Disconnected</span>
+</header>
+
+<main>
+
+    <section class="kartu">
+        <h2>Connection Settings</h2>
+        <div class="form">
+            <label>
+                Connection Type
+                <select id="tipe">
+                    <option value="robot">ROS2 &mdash; sumber dari params.yaml</option>
+                    <option value="rekaman">ROS2 &mdash; rekaman video</option>
+                    <option value="webcam">ROS2 &mdash; webcam laptop</option>
+                    <option value="simulasi">Simulasi (tanpa ROS2)</option>
+                </select>
+            </label>
+            <label id="baris_ros">
+                Server URL
+                <input id="url_ros" type="text" value="ws://localhost:9090">
+            </label>
+            <label id="baris_video">
+                Video Server URL
+                <input id="url_video" type="text" value="http://localhost:8080">
+            </label>
+            <label id="baris_rekaman">
+                Path Rekaman
+                <input id="path_rekaman" type="text"
+                       value="/home/altaaf-ihsan-latief/Downloads/vidio_jalurIrisCup.mp4">
+            </label>
+        </div>
+        <div class="aksi">
+            <button class="btn utama" id="btn_connect">Connect</button>
+            <button class="btn bahaya" id="btn_disconnect">Disconnect</button>
+            <button class="btn" id="btn_start">Start Robot</button>
+            <button class="btn" id="btn_stop">Stop Robot</button>
+            <button class="btn kanan" id="btn_clear">Clear Logs</button>
+        </div>
+    </section>
+
+    <section class="video">
+
+        <div class="kartu">
+            <h2>Raw Camera Feed</h2>
+            <div class="layar">
+                <img id="img_raw" alt="">
+                <span class="menunggu" id="tunggu_raw">Waiting for video stream...</span>
+            </div>
+            <div class="kaki">
+                <span>FPS: <b id="fps_raw">0</b></span>
+                <span>Resolution: <b id="res_raw">-</b></span>
+            </div>
+        </div>
+
+        <div class="kartu">
+            <h2>Bird's Eye View</h2>
+            <div class="layar">
+                <img id="img_bev" alt="">
+                <span class="menunggu" id="tunggu_bev">Waiting for video stream...</span>
+            </div>
+            <div class="kaki">
+                <span>FPS: <b id="fps_bev">0</b></span>
+                <span>Resolution: <b id="res_bev">-</b></span>
+            </div>
+        </div>
+
+        <div class="kartu">
+            <h2>Threshold (BEV)</h2>
+            <div class="layar">
+                <img id="img_mask" alt="">
+                <span class="menunggu" id="tunggu_mask">Waiting for video stream...</span>
+            </div>
+            <div class="kaki">
+                <span>FPS: <b id="fps_mask">0</b></span>
+                <span>Resolution: <b id="res_mask">-</b></span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="tiga">
+
+        <div class="kartu">
+            <h2>Steering Angle</h2>
+            <div class="gauge">
+                <svg viewBox="0 0 200 118">
+                    <path class="alur" d="M 20 100 A 80 80 0 0 1 180 100"/>
+                    <path class="nilai" id="busur" d="M 20 100 A 80 80 0 0 1 180 100"/>
+                    <line class="jarum" id="jarum" x1="100" y1="100" x2="100" y2="28"/>
+                    <circle class="poros" cx="100" cy="100" r="4"/>
+                </svg>
+                <div class="angka" id="sudut">0&deg;</div>
+                <div class="ket">Current Angle</div>
+            </div>
+        </div>
+
+        <div class="kartu">
+            <h2>Lane Detection</h2>
+            <div class="item">
+                <span class="label">Lane Status</span>
+                <span class="pil" id="lane_status">Unknown</span>
+            </div>
+            <div class="item">
+                <span class="label">Lateral Error</span>
+                <span class="besar" id="error">0.000</span>
+            </div>
+            <div class="item">
+                <span class="label">Lane Heading</span>
+                <span class="besar" id="heading">0.0&deg;</span>
+            </div>
+            <div class="item">
+                <span class="label">Segments Detected</span>
+                <span class="besar" id="blobs">0</span>
+            </div>
+            <div class="item">
+                <span class="label">Speed Command</span>
+                <span class="besar" id="speed">0</span>
+            </div>
+        </div>
+
+        <div class="kartu">
+            <h2>Robot Telemetry</h2>
+            <div class="item">
+                <span class="label">Robot State</span>
+                <span class="pil" id="state">idle</span>
+            </div>
+            <div class="item">
+                <span class="label">Battery</span>
+                <span class="besar" id="vbat">- V</span>
+            </div>
+            <div class="bar_tipis"><i id="bar_vbat"></i></div>
+            <div class="item">
+                <span class="label">Motor RPM</span>
+                <span class="besar" id="rpm">-</span>
+            </div>
+            <div class="item">
+                <span class="label">Jarak Tempuh</span>
+                <span class="besar" id="jarak">0 m</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="kartu">
+        <h2>System Logs</h2>
+        <div class="log" id="log"></div>
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+<script src="program.js"></script>
+</body>
+</html>

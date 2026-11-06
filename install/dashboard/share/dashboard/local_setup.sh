@@ -1,0 +1,1 @@
+/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/ament_cmake_environment_hooks/local_setup.sh

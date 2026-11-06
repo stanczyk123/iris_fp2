@@ -1,0 +1,57 @@
+[0.025s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/altaaf-ihsan-latief/Desktop/iris_fp2/src/vision -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision
+[0.200s] -- The C compiler identification is GNU 13.3.0
+[0.401s] -- The CXX compiler identification is GNU 13.3.0
+[0.455s] -- Detecting C compiler ABI info
+[0.730s] -- Detecting C compiler ABI info - done
+[0.770s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.771s] -- Detecting C compile features
+[0.774s] -- Detecting C compile features - done
+[0.802s] -- Detecting CXX compiler ABI info
+[1.111s] -- Detecting CXX compiler ABI info - done
+[1.147s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.148s] -- Detecting CXX compile features
+[1.150s] -- Detecting CXX compile features - done
+[1.158s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.672s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.944s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.029s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.160s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.206s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.260s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.323s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.597s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.607s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.865s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.931s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[3.011s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.300s] -- Found iris_msgs: 0.0.0 (/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake)
+[3.452s] -- Found OpenCV: /usr (found version "4.6.0") 
+[3.795s] -- Configuring done (3.7s)
+[3.844s] -- Generating done (0.0s)
+[3.857s] -- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision
+[3.894s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision' returned '0': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/altaaf-ihsan-latief/Desktop/iris_fp2/src/vision -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision
+[3.897s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision -- -j16 -l16
+[4.044s] [ 50%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/vision_node.cpp.o[0m
+[23.567s] [100%] [32m[1mLinking CXX executable vision_node[0m
+[25.613s] [100%] Built target vision_node
+[25.647s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision' returned '0': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision -- -j16 -l16
+[25.650s] Invoking command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision
+[25.673s] -- Install configuration: ""
+[25.675s] -- Execute custom install script
+[25.675s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/lib/vision/vision_node
+[25.701s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/ament_index/resource_index/package_run_dependencies/vision
+[25.727s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/ament_index/resource_index/parent_prefix_path/vision
+[25.755s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/environment/ament_prefix_path.sh
+[25.778s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/environment/ament_prefix_path.dsv
+[25.803s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/environment/path.sh
+[25.827s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/environment/path.dsv
+[25.853s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/local_setup.bash
+[25.878s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/local_setup.sh
+[25.903s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/local_setup.zsh
+[25.927s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/local_setup.dsv
+[25.953s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/package.dsv
+[25.978s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/ament_index/resource_index/packages/vision
+[26.003s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/cmake/visionConfig.cmake
+[26.028s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/cmake/visionConfig-version.cmake
+[26.052s] -- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/package.xml
+[26.083s] Invoked command in '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision' returned '0': AMENT_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision

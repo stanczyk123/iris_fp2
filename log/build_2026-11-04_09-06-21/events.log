@@ -1,0 +1,1024 @@
+[0.000000] (-) TimerEvent: {}
+[0.002705] (communication) JobQueued: {'identifier': 'communication', 'dependencies': OrderedDict()}
+[0.003084] (iris_msgs) JobQueued: {'identifier': 'iris_msgs', 'dependencies': OrderedDict()}
+[0.003208] (vision) JobQueued: {'identifier': 'vision', 'dependencies': OrderedDict({'iris_msgs': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs'})}
+[0.003288] (master) JobQueued: {'identifier': 'master', 'dependencies': OrderedDict({'iris_msgs': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs', 'vision': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision'})}
+[0.003350] (iris_msgs) JobStarted: {'identifier': 'iris_msgs'}
+[0.027911] (communication) JobStarted: {'identifier': 'communication'}
+[0.040048] (iris_msgs) JobProgress: {'identifier': 'iris_msgs', 'progress': 'cmake'}
+[0.042027] (iris_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/src/iris_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.057378] (communication) JobProgress: {'identifier': 'communication', 'progress': 'cmake'}
+[0.060298] (communication) Command: {'cmd': ['/usr/bin/cmake', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/src/communication', '-DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/communication'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[0.085799] (communication) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) in CMakeLists.txt:\n'}
+[0.086676] (communication) StderrLine: {'line': b'  No project() command is present.  The top-level CMakeLists.txt file must\n'}
+[0.087158] (communication) StderrLine: {'line': b'  contain a literal, direct call to the project() command.  Add a line of\n'}
+[0.087584] (communication) StderrLine: {'line': b'  code such as\n'}
+[0.087982] (communication) StderrLine: {'line': b'\n'}
+[0.088410] (communication) StderrLine: {'line': b'    project(ProjectName)\n'}
+[0.088807] (communication) StderrLine: {'line': b'\n'}
+[0.089200] (communication) StderrLine: {'line': b'  near the top of the file, but after cmake_minimum_required().\n'}
+[0.089594] (communication) StderrLine: {'line': b'\n'}
+[0.089972] (communication) StderrLine: {'line': b'  CMake is pretending there is a "project(Project)" command on the first\n'}
+[0.090406] (communication) StderrLine: {'line': b'  line.\n'}
+[0.090802] (communication) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.091223] (communication) StderrLine: {'line': b'\x1b[0m\n'}
+[0.091611] (communication) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) in CMakeLists.txt:\n'}
+[0.092007] (communication) StderrLine: {'line': b'  cmake_minimum_required() should be called prior to this top-level project()\n'}
+[0.092475] (communication) StderrLine: {'line': b'  call.  Please see the cmake-commands(7) manual for usage documentation of\n'}
+[0.092883] (communication) StderrLine: {'line': b'  both commands.\n'}
+[0.093300] (communication) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.093705] (communication) StderrLine: {'line': b'\x1b[0m\n'}
+[0.098555] (-) TimerEvent: {}
+[0.199324] (-) TimerEvent: {}
+[0.240419] (iris_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.272418] (communication) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.299522] (-) TimerEvent: {}
+[0.400230] (-) TimerEvent: {}
+[0.439346] (iris_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.492549] (iris_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.495047] (communication) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.500388] (-) TimerEvent: {}
+[0.553638] (communication) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.600657] (-) TimerEvent: {}
+[0.701551] (-) TimerEvent: {}
+[0.771991] (iris_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.801738] (-) TimerEvent: {}
+[0.812839] (iris_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.815456] (iris_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.816626] (iris_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.836345] (communication) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.853806] (iris_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.898521] (communication) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.899778] (communication) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.901877] (-) TimerEvent: {}
+[0.902622] (communication) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.948495] (communication) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.002093] (-) TimerEvent: {}
+[1.102826] (-) TimerEvent: {}
+[1.201288] (iris_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.202913] (-) TimerEvent: {}
+[1.238982] (iris_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.240144] (iris_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.242151] (iris_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.249451] (iris_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.275255] (communication) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.303174] (-) TimerEvent: {}
+[1.316796] (communication) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.317710] (communication) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.320004] (communication) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.322842] (communication) StdoutLine: {'line': b'-- Configuring done (1.2s)\n'}
+[1.325680] (communication) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.328509] (communication) StdoutLine: {'line': b'-- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication\n'}
+[1.339041] (communication) CommandEnded: {'returncode': 0}
+[1.341077] (communication) JobProgress: {'identifier': 'communication', 'progress': 'build'}
+[1.343388] (communication) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication', '--', '-j16', '-l16'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/communication', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[1.403384] (-) TimerEvent: {}
+[1.452845] (communication) CommandEnded: {'returncode': 0}
+[1.484364] (communication) JobEnded: {'identifier': 'communication', 'rc': 0}
+[1.503616] (-) TimerEvent: {}
+[1.604233] (-) TimerEvent: {}
+[1.704920] (-) TimerEvent: {}
+[1.763663] (iris_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.805186] (-) TimerEvent: {}
+[1.905899] (-) TimerEvent: {}
+[2.006581] (-) TimerEvent: {}
+[2.036987] (iris_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.106809] (-) TimerEvent: {}
+[2.119191] (iris_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[2.207074] (-) TimerEvent: {}
+[2.307818] (-) TimerEvent: {}
+[2.408555] (-) TimerEvent: {}
+[2.479331] (iris_msgs) StdoutLine: {'line': b'-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[2.508775] (-) TimerEvent: {}
+[2.598400] (iris_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[2.609015] (-) TimerEvent: {}
+[2.642948] (iris_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[2.695965] (iris_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.709254] (-) TimerEvent: {}
+[2.757230] (iris_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.809490] (-) TimerEvent: {}
+[2.872150] (iris_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[2.909727] (-) TimerEvent: {}
+[2.929690] (iris_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[3.010008] (-) TimerEvent: {}
+[3.110763] (-) TimerEvent: {}
+[3.211500] (-) TimerEvent: {}
+[3.312272] (-) TimerEvent: {}
+[3.413069] (-) TimerEvent: {}
+[3.513936] (-) TimerEvent: {}
+[3.614716] (-) TimerEvent: {}
+[3.715395] (-) TimerEvent: {}
+[3.816142] (-) TimerEvent: {}
+[3.916871] (-) TimerEvent: {}
+[4.017608] (-) TimerEvent: {}
+[4.118312] (-) TimerEvent: {}
+[4.219012] (-) TimerEvent: {}
+[4.319700] (-) TimerEvent: {}
+[4.420333] (-) TimerEvent: {}
+[4.520967] (-) TimerEvent: {}
+[4.621669] (-) TimerEvent: {}
+[4.722367] (-) TimerEvent: {}
+[4.777866] (iris_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.2 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[4.822595] (-) TimerEvent: {}
+[4.923292] (-) TimerEvent: {}
+[5.024027] (-) TimerEvent: {}
+[5.124776] (-) TimerEvent: {}
+[5.225528] (-) TimerEvent: {}
+[5.326246] (-) TimerEvent: {}
+[5.426880] (-) TimerEvent: {}
+[5.527592] (-) TimerEvent: {}
+[5.628242] (-) TimerEvent: {}
+[5.728861] (-) TimerEvent: {}
+[5.829549] (-) TimerEvent: {}
+[5.930349] (-) TimerEvent: {}
+[6.031055] (-) TimerEvent: {}
+[6.131742] (-) TimerEvent: {}
+[6.232424] (-) TimerEvent: {}
+[6.333152] (-) TimerEvent: {}
+[6.433859] (-) TimerEvent: {}
+[6.534601] (-) TimerEvent: {}
+[6.635321] (-) TimerEvent: {}
+[6.736015] (-) TimerEvent: {}
+[6.836742] (-) TimerEvent: {}
+[6.937481] (-) TimerEvent: {}
+[7.038230] (-) TimerEvent: {}
+[7.138952] (-) TimerEvent: {}
+[7.239710] (-) TimerEvent: {}
+[7.340483] (-) TimerEvent: {}
+[7.441210] (-) TimerEvent: {}
+[7.541912] (-) TimerEvent: {}
+[7.565222] (iris_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.642165] (-) TimerEvent: {}
+[7.742838] (-) TimerEvent: {}
+[7.843583] (-) TimerEvent: {}
+[7.944303] (-) TimerEvent: {}
+[8.044999] (-) TimerEvent: {}
+[8.145724] (-) TimerEvent: {}
+[8.246498] (-) TimerEvent: {}
+[8.347204] (-) TimerEvent: {}
+[8.448013] (-) TimerEvent: {}
+[8.548686] (-) TimerEvent: {}
+[8.649452] (-) TimerEvent: {}
+[8.650198] (iris_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.659941] (iris_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[8.749641] (-) TimerEvent: {}
+[8.850282] (-) TimerEvent: {}
+[8.950998] (-) TimerEvent: {}
+[9.051658] (-) TimerEvent: {}
+[9.143394] (iris_msgs) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[9.151879] (-) TimerEvent: {}
+[9.252595] (-) TimerEvent: {}
+[9.353280] (-) TimerEvent: {}
+[9.453948] (-) TimerEvent: {}
+[9.554573] (-) TimerEvent: {}
+[9.655250] (-) TimerEvent: {}
+[9.755840] (-) TimerEvent: {}
+[9.856543] (-) TimerEvent: {}
+[9.957227] (-) TimerEvent: {}
+[10.057887] (-) TimerEvent: {}
+[10.158566] (-) TimerEvent: {}
+[10.259237] (-) TimerEvent: {}
+[10.359942] (-) TimerEvent: {}
+[10.460668] (-) TimerEvent: {}
+[10.561316] (-) TimerEvent: {}
+[10.661962] (-) TimerEvent: {}
+[10.697880] (iris_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[10.762091] (-) TimerEvent: {}
+[10.862650] (-) TimerEvent: {}
+[10.963330] (-) TimerEvent: {}
+[11.027532] (iris_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[11.050199] (iris_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[11.053662] (iris_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[11.063538] (-) TimerEvent: {}
+[11.080590] (iris_msgs) StdoutLine: {'line': b'-- Configuring done (11.0s)\n'}
+[11.163786] (-) TimerEvent: {}
+[11.221778] (iris_msgs) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[11.263499] (iris_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs\n'}
+[11.264045] (-) TimerEvent: {}
+[11.295441] (iris_msgs) CommandEnded: {'returncode': 0}
+[11.299019] (iris_msgs) JobProgress: {'identifier': 'iris_msgs', 'progress': 'build'}
+[11.299141] (iris_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs', '--', '-j16', '-l16'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[11.364274] (-) TimerEvent: {}
+[11.451361] (iris_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[11.453096] (iris_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[11.464459] (-) TimerEvent: {}
+[11.479157] (iris_msgs) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_symlink_iris_msgs\n'}
+[11.564717] (-) TimerEvent: {}
+[11.665442] (-) TimerEvent: {}
+[11.766181] (-) TimerEvent: {}
+[11.866834] (-) TimerEvent: {}
+[11.967626] (-) TimerEvent: {}
+[12.068335] (-) TimerEvent: {}
+[12.168968] (-) TimerEvent: {}
+[12.224999] (iris_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[12.228420] (iris_msgs) StdoutLine: {'line': b'creating iris_msgs.egg-info\n'}
+[12.269223] (-) TimerEvent: {}
+[12.293417] (iris_msgs) StdoutLine: {'line': b'writing iris_msgs.egg-info/PKG-INFO\n'}
+[12.294208] (iris_msgs) StdoutLine: {'line': b'writing dependency_links to iris_msgs.egg-info/dependency_links.txt\n'}
+[12.295150] (iris_msgs) StdoutLine: {'line': b'writing top-level names to iris_msgs.egg-info/top_level.txt\n'}
+[12.295532] (iris_msgs) StdoutLine: {'line': b"writing manifest file 'iris_msgs.egg-info/SOURCES.txt'\n"}
+[12.369394] (-) TimerEvent: {}
+[12.397846] (iris_msgs) StdoutLine: {'line': b'[  3%] Built target iris_msgs__rosidl_generator_type_description\n'}
+[12.429950] (iris_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[12.460664] (iris_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[12.469559] (-) TimerEvent: {}
+[12.486933] (iris_msgs) StdoutLine: {'line': b"reading manifest file 'iris_msgs.egg-info/SOURCES.txt'\n"}
+[12.488835] (iris_msgs) StdoutLine: {'line': b"writing manifest file 'iris_msgs.egg-info/SOURCES.txt'\n"}
+[12.490894] (iris_msgs) StdoutLine: {'line': b'[  7%] Built target iris_msgs__rs\n'}
+[12.569840] (-) TimerEvent: {}
+[12.580204] (iris_msgs) StdoutLine: {'line': b'[  7%] Built target ament_cmake_python_build_iris_msgs_egg\n'}
+[12.670145] (-) TimerEvent: {}
+[12.770881] (-) TimerEvent: {}
+[12.871644] (-) TimerEvent: {}
+[12.972406] (-) TimerEvent: {}
+[13.073163] (-) TimerEvent: {}
+[13.173888] (-) TimerEvent: {}
+[13.274571] (-) TimerEvent: {}
+[13.375287] (-) TimerEvent: {}
+[13.475990] (-) TimerEvent: {}
+[13.576699] (-) TimerEvent: {}
+[13.677353] (-) TimerEvent: {}
+[13.777984] (-) TimerEvent: {}
+[13.850625] (iris_msgs) StdoutLine: {'line': b'[  7%] Built target iris_msgs__cpp\n'}
+[13.878250] (-) TimerEvent: {}
+[13.960590] (iris_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/lane_state__functions.c.o\x1b[0m\n'}
+[13.961593] (iris_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/lane_state__type_support.c.o\x1b[0m\n'}
+[13.962349] (iris_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/motor_command__description.c.o\x1b[0m\n'}
+[13.962856] (iris_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/motor_command__functions.c.o\x1b[0m\n'}
+[13.963445] (iris_msgs) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/motor_command__type_support.c.o\x1b[0m\n'}
+[13.964146] (iris_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/telemetry__description.c.o\x1b[0m\n'}
+[13.965427] (iris_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/lane_state__description.c.o\x1b[0m\n'}
+[13.966549] (iris_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/telemetry__type_support.c.o\x1b[0m\n'}
+[13.971608] (iris_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_c.dir/rosidl_generator_c/iris_msgs/msg/detail/telemetry__functions.c.o\x1b[0m\n'}
+[13.978417] (-) TimerEvent: {}
+[14.079171] (-) TimerEvent: {}
+[14.157853] (iris_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libiris_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[14.179285] (-) TimerEvent: {}
+[14.279908] (-) TimerEvent: {}
+[14.280683] (iris_msgs) StdoutLine: {'line': b'[ 25%] Built target iris_msgs__rosidl_generator_c\n'}
+[14.311365] (iris_msgs) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[14.313227] (iris_msgs) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[14.313992] (iris_msgs) StdoutLine: {'line': b'[ 30%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[14.314994] (iris_msgs) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[14.315561] (iris_msgs) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[14.315957] (iris_msgs) StdoutLine: {'line': b'[ 36%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[14.380085] (-) TimerEvent: {}
+[14.480852] (-) TimerEvent: {}
+[14.581641] (-) TimerEvent: {}
+[14.682431] (-) TimerEvent: {}
+[14.783164] (-) TimerEvent: {}
+[14.883923] (-) TimerEvent: {}
+[14.984702] (-) TimerEvent: {}
+[15.085433] (-) TimerEvent: {}
+[15.186189] (-) TimerEvent: {}
+[15.286934] (-) TimerEvent: {}
+[15.387755] (-) TimerEvent: {}
+[15.405631] (iris_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/iris_msgs/msg/lane_state__type_support.cpp.o\x1b[0m\n'}
+[15.406572] (iris_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/iris_msgs/msg/motor_command__type_support.cpp.o\x1b[0m\n'}
+[15.408619] (iris_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/iris_msgs/msg/telemetry__type_support.cpp.o\x1b[0m\n'}
+[15.436826] (iris_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/iris_msgs/msg/motor_command__type_support.cpp.o\x1b[0m\n'}
+[15.437734] (iris_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/iris_msgs/msg/telemetry__type_support.cpp.o\x1b[0m\n'}
+[15.438835] (iris_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/iris_msgs/msg/lane_state__type_support.cpp.o\x1b[0m\n'}
+[15.487956] (-) TimerEvent: {}
+[15.507196] (iris_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/iris_msgs/msg/detail/telemetry__type_support.cpp.o\x1b[0m\n'}
+[15.511894] (iris_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/iris_msgs/msg/detail/motor_command__type_support.cpp.o\x1b[0m\n'}
+[15.517332] (iris_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/iris_msgs/msg/detail/lane_state__type_support.cpp.o\x1b[0m\n'}
+[15.579457] (iris_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/iris_msgs/msg/detail/lane_state__type_support.c.o\x1b[0m\n'}
+[15.580621] (iris_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/iris_msgs/msg/detail/motor_command__type_support.c.o\x1b[0m\n'}
+[15.582490] (iris_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/iris_msgs/msg/detail/telemetry__type_support.c.o\x1b[0m\n'}
+[15.588153] (-) TimerEvent: {}
+[15.652090] (iris_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libiris_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[15.688379] (-) TimerEvent: {}
+[15.770978] (iris_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking C shared library libiris_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[15.788590] (-) TimerEvent: {}
+[15.824511] (iris_msgs) StdoutLine: {'line': b'[ 61%] Built target iris_msgs__rosidl_typesupport_c\n'}
+[15.839869] (iris_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/iris_msgs/msg/detail/dds_fastrtps/lane_state__type_support.cpp.o\x1b[0m\n'}
+[15.840835] (iris_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/iris_msgs/msg/detail/dds_fastrtps/motor_command__type_support.cpp.o\x1b[0m\n'}
+[15.843589] (iris_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/iris_msgs/msg/detail/dds_fastrtps/telemetry__type_support.cpp.o\x1b[0m\n'}
+[15.865340] (iris_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/iris_msgs/msg/detail/lane_state__type_support_c.cpp.o\x1b[0m\n'}
+[15.874249] (iris_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/iris_msgs/msg/detail/motor_command__type_support_c.cpp.o\x1b[0m\n'}
+[15.877926] (iris_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/iris_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/iris_msgs/msg/detail/telemetry__type_support_c.cpp.o\x1b[0m\n'}
+[15.888954] (-) TimerEvent: {}
+[15.905458] (iris_msgs) StdoutLine: {'line': b'[ 72%] Built target iris_msgs__rosidl_typesupport_introspection_c\n'}
+[15.989218] (-) TimerEvent: {}
+[16.090296] (-) TimerEvent: {}
+[16.191182] (-) TimerEvent: {}
+[16.292062] (-) TimerEvent: {}
+[16.392916] (-) TimerEvent: {}
+[16.493863] (-) TimerEvent: {}
+[16.594761] (-) TimerEvent: {}
+[16.695621] (-) TimerEvent: {}
+[16.796526] (-) TimerEvent: {}
+[16.897447] (-) TimerEvent: {}
+[16.935386] (iris_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libiris_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[16.997685] (-) TimerEvent: {}
+[17.073217] (iris_msgs) StdoutLine: {'line': b'[ 74%] Built target iris_msgs__rosidl_typesupport_cpp\n'}
+[17.097896] (-) TimerEvent: {}
+[17.126858] (iris_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libiris_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[17.198192] (-) TimerEvent: {}
+[17.298973] (-) TimerEvent: {}
+[17.345707] (iris_msgs) StdoutLine: {'line': b'[ 76%] Built target iris_msgs__rosidl_typesupport_introspection_cpp\n'}
+[17.399269] (-) TimerEvent: {}
+[17.499903] (-) TimerEvent: {}
+[17.600596] (-) TimerEvent: {}
+[17.701347] (-) TimerEvent: {}
+[17.802230] (-) TimerEvent: {}
+[17.903062] (-) TimerEvent: {}
+[18.003895] (-) TimerEvent: {}
+[18.004673] (iris_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libiris_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[18.026590] (iris_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libiris_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[18.104113] (-) TimerEvent: {}
+[18.176314] (iris_msgs) StdoutLine: {'line': b'[ 80%] Built target iris_msgs__rosidl_typesupport_fastrtps_c\n'}
+[18.191941] (iris_msgs) StdoutLine: {'line': b'[ 80%] Built target iris_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[18.204219] (-) TimerEvent: {}
+[18.250980] (iris_msgs) StdoutLine: {'line': b'[ 80%] Built target iris_msgs\n'}
+[18.304454] (-) TimerEvent: {}
+[18.310392] (iris_msgs) StdoutLine: {'line': b'[ 81%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[18.404671] (-) TimerEvent: {}
+[18.505465] (-) TimerEvent: {}
+[18.606264] (-) TimerEvent: {}
+[18.707056] (-) TimerEvent: {}
+[18.807831] (-) TimerEvent: {}
+[18.908535] (-) TimerEvent: {}
+[19.009374] (-) TimerEvent: {}
+[19.110038] (-) TimerEvent: {}
+[19.210766] (-) TimerEvent: {}
+[19.311574] (-) TimerEvent: {}
+[19.412325] (-) TimerEvent: {}
+[19.513145] (-) TimerEvent: {}
+[19.613864] (-) TimerEvent: {}
+[19.714567] (-) TimerEvent: {}
+[19.815225] (-) TimerEvent: {}
+[19.915859] (-) TimerEvent: {}
+[20.016463] (-) TimerEvent: {}
+[20.117235] (-) TimerEvent: {}
+[20.120419] (iris_msgs) StdoutLine: {'line': b'[ 81%] Built target iris_msgs__py\n'}
+[20.180559] (iris_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_py.dir/rosidl_generator_py/iris_msgs/msg/_lane_state_s.c.o\x1b[0m\n'}
+[20.181856] (iris_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_py.dir/rosidl_generator_py/iris_msgs/msg/_motor_command_s.c.o\x1b[0m\n'}
+[20.182816] (iris_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/iris_msgs__rosidl_generator_py.dir/rosidl_generator_py/iris_msgs/msg/_telemetry_s.c.o\x1b[0m\n'}
+[20.217394] (-) TimerEvent: {}
+[20.318120] (-) TimerEvent: {}
+[20.418809] (-) TimerEvent: {}
+[20.519636] (-) TimerEvent: {}
+[20.597258] (iris_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library libiris_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[20.619865] (-) TimerEvent: {}
+[20.720581] (-) TimerEvent: {}
+[20.737637] (iris_msgs) StdoutLine: {'line': b'[ 89%] Built target iris_msgs__rosidl_generator_py\n'}
+[20.798347] (iris_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/iris_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/iris_msgs/_iris_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[20.800214] (iris_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/iris_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/iris_msgs/_iris_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[20.800965] (iris_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/iris_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/iris_msgs/_iris_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[20.820783] (-) TimerEvent: {}
+[20.921596] (-) TimerEvent: {}
+[21.022365] (-) TimerEvent: {}
+[21.123044] (-) TimerEvent: {}
+[21.154728] (iris_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/iris_msgs/iris_msgs_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[21.159699] (iris_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/iris_msgs/iris_msgs_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[21.161271] (iris_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/iris_msgs/iris_msgs_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[21.223287] (-) TimerEvent: {}
+[21.249968] (iris_msgs) StdoutLine: {'line': b'[100%] Built target iris_msgs_s__rosidl_typesupport_c\n'}
+[21.254570] (iris_msgs) StdoutLine: {'line': b'[100%] Built target iris_msgs_s__rosidl_typesupport_introspection_c\n'}
+[21.257949] (iris_msgs) StdoutLine: {'line': b'[100%] Built target iris_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[21.292902] (iris_msgs) CommandEnded: {'returncode': 0}
+[21.295091] (iris_msgs) JobProgress: {'identifier': 'iris_msgs', 'progress': 'install'}
+[21.321197] (iris_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[21.323369] (-) TimerEvent: {}
+[21.345592] (iris_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[21.347737] (iris_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[21.348632] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/ament_index/resource_index/rosidl_interfaces/iris_msgs\n'}
+[21.374756] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/LaneState.json\n'}
+[21.399552] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/MotorCommand.json\n'}
+[21.423631] (-) TimerEvent: {}
+[21.424547] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/Telemetry.json\n'}
+[21.451269] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__functions.h\n'}
+[21.476000] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__struct.h\n'}
+[21.500844] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__type_support.h\n'}
+[21.523770] (-) TimerEvent: {}
+[21.526393] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__functions.h\n'}
+[21.551815] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__struct.h\n'}
+[21.576610] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__type_support.h\n'}
+[21.601424] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__functions.h\n'}
+[21.623997] (-) TimerEvent: {}
+[21.625888] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__struct.h\n'}
+[21.650943] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__type_support.h\n'}
+[21.676851] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/lane_state.h\n'}
+[21.702095] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/motor_command.h\n'}
+[21.724220] (-) TimerEvent: {}
+[21.726646] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[21.752398] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/telemetry.h\n'}
+[21.777587] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/environment/library_path.sh\n'}
+[21.802284] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/environment/library_path.dsv\n'}
+[21.824479] (-) TimerEvent: {}
+[21.827862] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__rosidl_typesupport_fastrtps_c.h\n'}
+[21.852803] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__rosidl_typesupport_fastrtps_c.h\n'}
+[21.877470] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__rosidl_typesupport_fastrtps_c.h\n'}
+[21.901971] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[21.924713] (-) TimerEvent: {}
+[21.928743] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__builder.hpp\n'}
+[21.955863] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__struct.hpp\n'}
+[21.981179] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__traits.hpp\n'}
+[22.005324] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__type_support.hpp\n'}
+[22.024945] (-) TimerEvent: {}
+[22.029388] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__builder.hpp\n'}
+[22.053710] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__struct.hpp\n'}
+[22.077651] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__traits.hpp\n'}
+[22.101349] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__type_support.hpp\n'}
+[22.124731] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__builder.hpp\n'}
+[22.125287] (-) TimerEvent: {}
+[22.150368] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__struct.hpp\n'}
+[22.174298] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__traits.hpp\n'}
+[22.200089] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__type_support.hpp\n'}
+[22.225303] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/lane_state.hpp\n'}
+[22.225809] (-) TimerEvent: {}
+[22.250702] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/motor_command.hpp\n'}
+[22.275730] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[22.299895] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/telemetry.hpp\n'}
+[22.325528] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[22.326139] (-) TimerEvent: {}
+[22.350680] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[22.375601] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[22.400445] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[22.426303] (-) TimerEvent: {}
+[22.426956] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__rosidl_typesupport_introspection_c.h\n'}
+[22.452979] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__rosidl_typesupport_introspection_c.h\n'}
+[22.479840] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__rosidl_typesupport_introspection_c.h\n'}
+[22.506023] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[22.526464] (-) TimerEvent: {}
+[22.535594] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/lane_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[22.566191] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/motor_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[22.591327] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/include/iris_msgs/iris_msgs/msg/detail/telemetry__rosidl_typesupport_introspection_cpp.hpp\n'}
+[22.620501] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/environment/pythonpath.sh\n'}
+[22.626649] (-) TimerEvent: {}
+[22.646636] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/environment/pythonpath.dsv\n'}
+[22.673688] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[22.699159] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[22.723944] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[22.726806] (-) TimerEvent: {}
+[22.749941] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[22.776348] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/__init__.py\n'}
+[22.803729] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/_iris_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[22.827039] (-) TimerEvent: {}
+[22.828075] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/_iris_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[22.852927] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/_iris_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[22.877358] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/iris_msgs_s__rosidl_typesupport_c.so\n'}
+[22.902252] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/iris_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[22.927270] (-) TimerEvent: {}
+[22.932758] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/iris_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[22.959550] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/__init__.py\n'}
+[22.985674] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_lane_state.py\n'}
+[23.010334] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_lane_state_s.c\n'}
+[23.027502] (-) TimerEvent: {}
+[23.034127] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_motor_command.py\n'}
+[23.058877] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_motor_command_s.c\n'}
+[23.083356] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_telemetry.py\n'}
+[23.107168] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_telemetry_s.c\n'}
+[23.127733] (-) TimerEvent: {}
+[23.132632] (iris_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/iris_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[23.134021] (iris_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/iris_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[23.135465] (iris_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/iris_msgs_s__rosidl_typesupport_c.so\n'}
+[23.137448] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/rust/Cargo.toml\n'}
+[23.163390] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/rust/build.rs\n'}
+[23.189428] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/rust/src/lib.rs\n'}
+[23.216784] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/rust/src/msg.rs\n'}
+[23.227977] (-) TimerEvent: {}
+[23.243094] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/rust/src/msg/rmw.rs\n'}
+[23.269634] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/LaneState.idl\n'}
+[23.294531] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/MotorCommand.idl\n'}
+[23.319587] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/Telemetry.idl\n'}
+[23.328205] (-) TimerEvent: {}
+[23.344712] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/LaneState.msg\n'}
+[23.369924] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/MotorCommand.msg\n'}
+[23.394956] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/msg/Telemetry.msg\n'}
+[23.420321] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/ament_index/resource_index/package_run_dependencies/iris_msgs\n'}
+[23.428439] (-) TimerEvent: {}
+[23.447546] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/ament_index/resource_index/parent_prefix_path/iris_msgs\n'}
+[23.472280] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/environment/ament_prefix_path.sh\n'}
+[23.497748] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/environment/ament_prefix_path.dsv\n'}
+[23.523674] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/environment/path.sh\n'}
+[23.528606] (-) TimerEvent: {}
+[23.551431] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/environment/path.dsv\n'}
+[23.576982] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/local_setup.bash\n'}
+[23.602090] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/local_setup.sh\n'}
+[23.627539] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/local_setup.zsh\n'}
+[23.628704] (-) TimerEvent: {}
+[23.653759] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/local_setup.dsv\n'}
+[23.679521] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/package.dsv\n'}
+[23.705054] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/ament_index/resource_index/packages/iris_msgs\n'}
+[23.728899] (-) TimerEvent: {}
+[23.732626] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[23.759982] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[23.786344] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[23.811517] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[23.829132] (-) TimerEvent: {}
+[23.836246] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[23.861746] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[23.886571] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[23.910884] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[23.929344] (-) TimerEvent: {}
+[23.936162] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgsConfig.cmake\n'}
+[23.963703] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgsConfig-version.cmake\n'}
+[23.991966] (iris_msgs) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/package.xml\n'}
+[24.017788] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_generator_c.so\n'}
+[24.019443] (iris_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_generator_c.so" to ""\n'}
+[24.020046] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[24.021169] (iris_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[24.021893] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[24.022950] (iris_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[24.023701] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_introspection_c.so\n'}
+[24.024701] (iris_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[24.025444] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_c.so\n'}
+[24.026316] (iris_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_c.so" to ""\n'}
+[24.026966] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[24.028054] (iris_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[24.028764] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_cpp.so\n'}
+[24.029452] (-) TimerEvent: {}
+[24.029984] (iris_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[24.129719] (-) TimerEvent: {}
+[24.178574] (iris_msgs) StdoutLine: {'line': b"Listing '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs'...\n"}
+[24.179215] (iris_msgs) StdoutLine: {'line': b"Compiling '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/__init__.py'...\n"}
+[24.179511] (iris_msgs) StdoutLine: {'line': b"Listing '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg'...\n"}
+[24.179762] (iris_msgs) StdoutLine: {'line': b"Compiling '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/__init__.py'...\n"}
+[24.180045] (iris_msgs) StdoutLine: {'line': b"Compiling '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_lane_state.py'...\n"}
+[24.180329] (iris_msgs) StdoutLine: {'line': b"Compiling '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_motor_command.py'...\n"}
+[24.180574] (iris_msgs) StdoutLine: {'line': b"Compiling '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages/iris_msgs/msg/_telemetry.py'...\n"}
+[24.198649] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_generator_py.so\n'}
+[24.199840] (iris_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/libiris_msgs__rosidl_generator_py.so" to ""\n'}
+[24.200657] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_generator_cExport.cmake\n'}
+[24.200968] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[24.201440] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[24.201863] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[24.202304] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_generator_cppExport.cmake\n'}
+[24.202699] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[24.202961] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[24.203372] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[24.203748] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[24.204135] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgs__rosidl_typesupport_cExport.cmake\n'}
+[24.204505] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[24.204878] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[24.205271] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[24.205640] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[24.206076] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/iris_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[24.206388] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_generator_pyExport.cmake\n'}
+[24.206625] (iris_msgs) StdoutLine: {'line': b'-- Installing: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake/export_iris_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[24.213133] (iris_msgs) CommandEnded: {'returncode': 0}
+[24.229962] (-) TimerEvent: {}
+[24.266843] (iris_msgs) JobEnded: {'identifier': 'iris_msgs', 'rc': 0}
+[24.272690] (vision) JobStarted: {'identifier': 'vision'}
+[24.292459] (vision) JobProgress: {'identifier': 'vision', 'progress': 'cmake'}
+[24.294434] (vision) Command: {'cmd': ['/usr/bin/cmake', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/src/vision', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[24.330301] (-) TimerEvent: {}
+[24.430891] (-) TimerEvent: {}
+[24.472699] (vision) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[24.531074] (-) TimerEvent: {}
+[24.631780] (-) TimerEvent: {}
+[24.673701] (vision) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[24.726857] (vision) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[24.731926] (-) TimerEvent: {}
+[24.832566] (-) TimerEvent: {}
+[24.933272] (-) TimerEvent: {}
+[25.001974] (vision) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[25.033429] (-) TimerEvent: {}
+[25.042459] (vision) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[25.043585] (vision) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[25.045836] (vision) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[25.074190] (vision) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[25.133700] (-) TimerEvent: {}
+[25.234451] (-) TimerEvent: {}
+[25.335143] (-) TimerEvent: {}
+[25.382992] (vision) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[25.419505] (vision) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[25.420651] (vision) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[25.422374] (vision) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[25.429999] (vision) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[25.435235] (-) TimerEvent: {}
+[25.535945] (-) TimerEvent: {}
+[25.636658] (-) TimerEvent: {}
+[25.737422] (-) TimerEvent: {}
+[25.838060] (-) TimerEvent: {}
+[25.938814] (-) TimerEvent: {}
+[25.944611] (vision) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[26.039054] (-) TimerEvent: {}
+[26.139758] (-) TimerEvent: {}
+[26.216321] (vision) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[26.240016] (-) TimerEvent: {}
+[26.301362] (vision) StdoutLine: {'line': b'-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[26.340221] (-) TimerEvent: {}
+[26.432349] (vision) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[26.440450] (-) TimerEvent: {}
+[26.477951] (vision) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[26.532378] (vision) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[26.540670] (-) TimerEvent: {}
+[26.594693] (vision) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[26.640913] (-) TimerEvent: {}
+[26.741588] (-) TimerEvent: {}
+[26.842214] (-) TimerEvent: {}
+[26.869231] (vision) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[26.879441] (vision) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[26.942452] (-) TimerEvent: {}
+[27.043185] (-) TimerEvent: {}
+[27.136713] (vision) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[27.143324] (-) TimerEvent: {}
+[27.203346] (vision) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[27.243556] (-) TimerEvent: {}
+[27.283540] (vision) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[27.343720] (-) TimerEvent: {}
+[27.444442] (-) TimerEvent: {}
+[27.545197] (-) TimerEvent: {}
+[27.572348] (vision) StdoutLine: {'line': b'-- Found iris_msgs: 0.0.0 (/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake)\n'}
+[27.645426] (-) TimerEvent: {}
+[27.723704] (vision) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.6.0") \n'}
+[27.745661] (-) TimerEvent: {}
+[27.846358] (-) TimerEvent: {}
+[27.947181] (-) TimerEvent: {}
+[28.047978] (-) TimerEvent: {}
+[28.067603] (vision) StdoutLine: {'line': b'-- Configuring done (3.7s)\n'}
+[28.116016] (vision) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[28.129583] (vision) StdoutLine: {'line': b'-- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision\n'}
+[28.148172] (-) TimerEvent: {}
+[28.164356] (vision) CommandEnded: {'returncode': 0}
+[28.168703] (vision) JobProgress: {'identifier': 'vision', 'progress': 'build'}
+[28.168855] (vision) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision', '--', '-j16', '-l16'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[28.248429] (-) TimerEvent: {}
+[28.315983] (vision) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/vision_node.dir/src/vision_node.cpp.o\x1b[0m\n'}
+[28.348655] (-) TimerEvent: {}
+[28.449310] (-) TimerEvent: {}
+[28.549974] (-) TimerEvent: {}
+[28.650639] (-) TimerEvent: {}
+[28.751377] (-) TimerEvent: {}
+[28.852056] (-) TimerEvent: {}
+[28.952818] (-) TimerEvent: {}
+[29.053656] (-) TimerEvent: {}
+[29.154412] (-) TimerEvent: {}
+[29.255182] (-) TimerEvent: {}
+[29.356006] (-) TimerEvent: {}
+[29.456804] (-) TimerEvent: {}
+[29.557454] (-) TimerEvent: {}
+[29.658173] (-) TimerEvent: {}
+[29.758854] (-) TimerEvent: {}
+[29.859649] (-) TimerEvent: {}
+[29.960419] (-) TimerEvent: {}
+[30.061175] (-) TimerEvent: {}
+[30.161838] (-) TimerEvent: {}
+[30.262597] (-) TimerEvent: {}
+[30.363349] (-) TimerEvent: {}
+[30.464092] (-) TimerEvent: {}
+[30.564815] (-) TimerEvent: {}
+[30.665522] (-) TimerEvent: {}
+[30.766260] (-) TimerEvent: {}
+[30.866943] (-) TimerEvent: {}
+[30.967657] (-) TimerEvent: {}
+[31.068325] (-) TimerEvent: {}
+[31.168993] (-) TimerEvent: {}
+[31.269703] (-) TimerEvent: {}
+[31.370448] (-) TimerEvent: {}
+[31.471163] (-) TimerEvent: {}
+[31.571878] (-) TimerEvent: {}
+[31.672634] (-) TimerEvent: {}
+[31.773323] (-) TimerEvent: {}
+[31.874004] (-) TimerEvent: {}
+[31.974718] (-) TimerEvent: {}
+[32.075458] (-) TimerEvent: {}
+[32.176211] (-) TimerEvent: {}
+[32.276869] (-) TimerEvent: {}
+[32.377658] (-) TimerEvent: {}
+[32.478366] (-) TimerEvent: {}
+[32.579061] (-) TimerEvent: {}
+[32.679859] (-) TimerEvent: {}
+[32.780669] (-) TimerEvent: {}
+[32.881418] (-) TimerEvent: {}
+[32.982142] (-) TimerEvent: {}
+[33.082928] (-) TimerEvent: {}
+[33.183721] (-) TimerEvent: {}
+[33.284470] (-) TimerEvent: {}
+[33.385200] (-) TimerEvent: {}
+[33.485914] (-) TimerEvent: {}
+[33.586664] (-) TimerEvent: {}
+[33.687352] (-) TimerEvent: {}
+[33.788060] (-) TimerEvent: {}
+[33.888780] (-) TimerEvent: {}
+[33.989540] (-) TimerEvent: {}
+[34.090157] (-) TimerEvent: {}
+[34.190829] (-) TimerEvent: {}
+[34.291561] (-) TimerEvent: {}
+[34.392252] (-) TimerEvent: {}
+[34.493008] (-) TimerEvent: {}
+[34.593818] (-) TimerEvent: {}
+[34.694635] (-) TimerEvent: {}
+[34.795424] (-) TimerEvent: {}
+[34.896205] (-) TimerEvent: {}
+[34.997023] (-) TimerEvent: {}
+[35.097748] (-) TimerEvent: {}
+[35.198540] (-) TimerEvent: {}
+[35.299315] (-) TimerEvent: {}
+[35.399989] (-) TimerEvent: {}
+[35.500686] (-) TimerEvent: {}
+[35.601446] (-) TimerEvent: {}
+[35.702243] (-) TimerEvent: {}
+[35.802924] (-) TimerEvent: {}
+[35.903676] (-) TimerEvent: {}
+[36.004369] (-) TimerEvent: {}
+[36.105157] (-) TimerEvent: {}
+[36.205876] (-) TimerEvent: {}
+[36.306658] (-) TimerEvent: {}
+[36.407458] (-) TimerEvent: {}
+[36.508230] (-) TimerEvent: {}
+[36.608952] (-) TimerEvent: {}
+[36.709724] (-) TimerEvent: {}
+[36.810515] (-) TimerEvent: {}
+[36.911254] (-) TimerEvent: {}
+[37.011982] (-) TimerEvent: {}
+[37.112719] (-) TimerEvent: {}
+[37.213441] (-) TimerEvent: {}
+[37.314189] (-) TimerEvent: {}
+[37.414917] (-) TimerEvent: {}
+[37.515692] (-) TimerEvent: {}
+[37.616465] (-) TimerEvent: {}
+[37.717265] (-) TimerEvent: {}
+[37.817999] (-) TimerEvent: {}
+[37.918718] (-) TimerEvent: {}
+[38.019414] (-) TimerEvent: {}
+[38.120054] (-) TimerEvent: {}
+[38.220807] (-) TimerEvent: {}
+[38.321534] (-) TimerEvent: {}
+[38.422232] (-) TimerEvent: {}
+[38.522910] (-) TimerEvent: {}
+[38.623648] (-) TimerEvent: {}
+[38.724341] (-) TimerEvent: {}
+[38.825029] (-) TimerEvent: {}
+[38.925776] (-) TimerEvent: {}
+[39.026500] (-) TimerEvent: {}
+[39.127241] (-) TimerEvent: {}
+[39.227911] (-) TimerEvent: {}
+[39.328630] (-) TimerEvent: {}
+[39.429311] (-) TimerEvent: {}
+[39.529980] (-) TimerEvent: {}
+[39.630697] (-) TimerEvent: {}
+[39.731347] (-) TimerEvent: {}
+[39.832020] (-) TimerEvent: {}
+[39.932724] (-) TimerEvent: {}
+[40.033442] (-) TimerEvent: {}
+[40.134174] (-) TimerEvent: {}
+[40.234844] (-) TimerEvent: {}
+[40.335626] (-) TimerEvent: {}
+[40.436435] (-) TimerEvent: {}
+[40.537222] (-) TimerEvent: {}
+[40.637969] (-) TimerEvent: {}
+[40.738781] (-) TimerEvent: {}
+[40.839576] (-) TimerEvent: {}
+[40.940355] (-) TimerEvent: {}
+[41.041149] (-) TimerEvent: {}
+[41.141904] (-) TimerEvent: {}
+[41.242653] (-) TimerEvent: {}
+[41.343365] (-) TimerEvent: {}
+[41.444073] (-) TimerEvent: {}
+[41.544813] (-) TimerEvent: {}
+[41.645528] (-) TimerEvent: {}
+[41.746237] (-) TimerEvent: {}
+[41.846832] (-) TimerEvent: {}
+[41.947475] (-) TimerEvent: {}
+[42.048118] (-) TimerEvent: {}
+[42.148731] (-) TimerEvent: {}
+[42.249382] (-) TimerEvent: {}
+[42.350043] (-) TimerEvent: {}
+[42.450857] (-) TimerEvent: {}
+[42.551587] (-) TimerEvent: {}
+[42.652240] (-) TimerEvent: {}
+[42.752917] (-) TimerEvent: {}
+[42.853719] (-) TimerEvent: {}
+[42.954496] (-) TimerEvent: {}
+[43.055231] (-) TimerEvent: {}
+[43.155964] (-) TimerEvent: {}
+[43.256731] (-) TimerEvent: {}
+[43.357420] (-) TimerEvent: {}
+[43.458044] (-) TimerEvent: {}
+[43.558707] (-) TimerEvent: {}
+[43.659387] (-) TimerEvent: {}
+[43.760047] (-) TimerEvent: {}
+[43.860761] (-) TimerEvent: {}
+[43.961445] (-) TimerEvent: {}
+[44.062067] (-) TimerEvent: {}
+[44.162763] (-) TimerEvent: {}
+[44.263458] (-) TimerEvent: {}
+[44.364139] (-) TimerEvent: {}
+[44.464758] (-) TimerEvent: {}
+[44.565396] (-) TimerEvent: {}
+[44.666009] (-) TimerEvent: {}
+[44.766646] (-) TimerEvent: {}
+[44.867205] (-) TimerEvent: {}
+[44.967725] (-) TimerEvent: {}
+[45.068293] (-) TimerEvent: {}
+[45.168845] (-) TimerEvent: {}
+[45.269428] (-) TimerEvent: {}
+[45.369987] (-) TimerEvent: {}
+[45.470637] (-) TimerEvent: {}
+[45.571259] (-) TimerEvent: {}
+[45.671867] (-) TimerEvent: {}
+[45.772513] (-) TimerEvent: {}
+[45.873157] (-) TimerEvent: {}
+[45.973771] (-) TimerEvent: {}
+[46.074439] (-) TimerEvent: {}
+[46.175067] (-) TimerEvent: {}
+[46.275736] (-) TimerEvent: {}
+[46.376392] (-) TimerEvent: {}
+[46.476925] (-) TimerEvent: {}
+[46.577475] (-) TimerEvent: {}
+[46.677985] (-) TimerEvent: {}
+[46.778530] (-) TimerEvent: {}
+[46.879076] (-) TimerEvent: {}
+[46.979652] (-) TimerEvent: {}
+[47.080209] (-) TimerEvent: {}
+[47.180812] (-) TimerEvent: {}
+[47.281611] (-) TimerEvent: {}
+[47.382312] (-) TimerEvent: {}
+[47.483069] (-) TimerEvent: {}
+[47.583842] (-) TimerEvent: {}
+[47.684656] (-) TimerEvent: {}
+[47.785403] (-) TimerEvent: {}
+[47.839511] (vision) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable vision_node\x1b[0m\n'}
+[47.885642] (-) TimerEvent: {}
+[47.986394] (-) TimerEvent: {}
+[48.087193] (-) TimerEvent: {}
+[48.187954] (-) TimerEvent: {}
+[48.288732] (-) TimerEvent: {}
+[48.389564] (-) TimerEvent: {}
+[48.490361] (-) TimerEvent: {}
+[48.591193] (-) TimerEvent: {}
+[48.691981] (-) TimerEvent: {}
+[48.792778] (-) TimerEvent: {}
+[48.893601] (-) TimerEvent: {}
+[48.994368] (-) TimerEvent: {}
+[49.095173] (-) TimerEvent: {}
+[49.195975] (-) TimerEvent: {}
+[49.296787] (-) TimerEvent: {}
+[49.397634] (-) TimerEvent: {}
+[49.498470] (-) TimerEvent: {}
+[49.599277] (-) TimerEvent: {}
+[49.700073] (-) TimerEvent: {}
+[49.800913] (-) TimerEvent: {}
+[49.885436] (vision) StdoutLine: {'line': b'[100%] Built target vision_node\n'}
+[49.901074] (-) TimerEvent: {}
+[49.918426] (vision) CommandEnded: {'returncode': 0}
+[49.920740] (vision) JobProgress: {'identifier': 'vision', 'progress': 'install'}
+[49.922145] (vision) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/vision', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[49.945205] (vision) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[49.946903] (vision) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[49.947880] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/lib/vision/vision_node\n'}
+[49.973778] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/ament_index/resource_index/package_run_dependencies/vision\n'}
+[49.998896] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/ament_index/resource_index/parent_prefix_path/vision\n'}
+[50.001299] (-) TimerEvent: {}
+[50.027193] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/environment/ament_prefix_path.sh\n'}
+[50.050712] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/environment/ament_prefix_path.dsv\n'}
+[50.075333] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/environment/path.sh\n'}
+[50.099645] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/environment/path.dsv\n'}
+[50.101393] (-) TimerEvent: {}
+[50.125061] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/local_setup.bash\n'}
+[50.150664] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/local_setup.sh\n'}
+[50.175396] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/local_setup.zsh\n'}
+[50.199663] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/local_setup.dsv\n'}
+[50.201503] (-) TimerEvent: {}
+[50.225036] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/package.dsv\n'}
+[50.250696] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/ament_index/resource_index/packages/vision\n'}
+[50.275593] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/cmake/visionConfig.cmake\n'}
+[50.300169] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/cmake/visionConfig-version.cmake\n'}
+[50.301615] (-) TimerEvent: {}
+[50.324519] (vision) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision/share/vision/package.xml\n'}
+[50.353638] (vision) CommandEnded: {'returncode': 0}
+[50.386717] (vision) JobEnded: {'identifier': 'vision', 'rc': 0}
+[50.392304] (master) JobStarted: {'identifier': 'master'}
+[50.401833] (-) TimerEvent: {}
+[50.413532] (master) JobProgress: {'identifier': 'master', 'progress': 'cmake'}
+[50.414742] (master) Command: {'cmd': ['/usr/bin/cmake', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/src/master', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[50.502149] (-) TimerEvent: {}
+[50.596233] (master) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[50.602297] (-) TimerEvent: {}
+[50.702973] (-) TimerEvent: {}
+[50.791054] (master) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[50.803205] (-) TimerEvent: {}
+[50.841035] (master) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[50.903408] (-) TimerEvent: {}
+[51.004047] (-) TimerEvent: {}
+[51.104749] (-) TimerEvent: {}
+[51.113189] (master) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[51.148712] (master) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[51.149568] (master) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[51.151076] (master) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[51.179906] (master) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[51.204900] (-) TimerEvent: {}
+[51.305631] (-) TimerEvent: {}
+[51.406383] (-) TimerEvent: {}
+[51.488727] (master) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[51.506557] (-) TimerEvent: {}
+[51.525211] (master) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[51.526208] (master) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[51.528538] (master) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[51.535329] (master) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[51.606735] (-) TimerEvent: {}
+[51.707486] (-) TimerEvent: {}
+[51.808286] (-) TimerEvent: {}
+[51.908947] (-) TimerEvent: {}
+[51.995386] (master) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[52.009121] (-) TimerEvent: {}
+[52.104669] (master) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[52.109157] (-) TimerEvent: {}
+[52.133484] (master) StdoutLine: {'line': b'-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[52.171177] (master) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[52.183909] (master) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[52.198315] (master) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[52.209292] (-) TimerEvent: {}
+[52.214561] (master) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[52.281153] (master) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[52.283268] (master) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[52.309465] (-) TimerEvent: {}
+[52.339384] (master) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[52.354132] (master) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[52.371144] (master) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[52.409615] (-) TimerEvent: {}
+[52.427471] (master) StdoutLine: {'line': b'-- Found iris_msgs: 0.0.0 (/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/share/iris_msgs/cmake)\n'}
+[52.509790] (-) TimerEvent: {}
+[52.515466] (master) StdoutLine: {'line': b'-- Configuring done (2.1s)\n'}
+[52.522371] (master) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[52.524695] (master) StdoutLine: {'line': b'-- Build files have been written to: /home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master\n'}
+[52.532641] (master) CommandEnded: {'returncode': 0}
+[52.532878] (master) JobProgress: {'identifier': 'master', 'progress': 'build'}
+[52.533027] (master) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master', '--', '-j16', '-l16'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[52.561610] (master) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/master_node.dir/src/master_node.cpp.o\x1b[0m\n'}
+[52.609909] (-) TimerEvent: {}
+[52.710217] (-) TimerEvent: {}
+[52.810524] (-) TimerEvent: {}
+[52.910782] (-) TimerEvent: {}
+[53.011125] (-) TimerEvent: {}
+[53.111445] (-) TimerEvent: {}
+[53.211750] (-) TimerEvent: {}
+[53.312000] (-) TimerEvent: {}
+[53.412330] (-) TimerEvent: {}
+[53.512663] (-) TimerEvent: {}
+[53.613015] (-) TimerEvent: {}
+[53.713365] (-) TimerEvent: {}
+[53.813685] (-) TimerEvent: {}
+[53.914016] (-) TimerEvent: {}
+[54.014365] (-) TimerEvent: {}
+[54.114686] (-) TimerEvent: {}
+[54.215022] (-) TimerEvent: {}
+[54.315352] (-) TimerEvent: {}
+[54.415688] (-) TimerEvent: {}
+[54.516025] (-) TimerEvent: {}
+[54.616367] (-) TimerEvent: {}
+[54.716681] (-) TimerEvent: {}
+[54.816993] (-) TimerEvent: {}
+[54.917316] (-) TimerEvent: {}
+[55.017634] (-) TimerEvent: {}
+[55.117959] (-) TimerEvent: {}
+[55.218236] (-) TimerEvent: {}
+[55.318569] (-) TimerEvent: {}
+[55.418910] (-) TimerEvent: {}
+[55.519223] (-) TimerEvent: {}
+[55.619561] (-) TimerEvent: {}
+[55.719900] (-) TimerEvent: {}
+[55.820186] (-) TimerEvent: {}
+[55.920501] (-) TimerEvent: {}
+[56.020742] (-) TimerEvent: {}
+[56.121041] (-) TimerEvent: {}
+[56.221334] (-) TimerEvent: {}
+[56.321650] (-) TimerEvent: {}
+[56.421965] (-) TimerEvent: {}
+[56.522245] (-) TimerEvent: {}
+[56.622534] (-) TimerEvent: {}
+[56.722868] (-) TimerEvent: {}
+[56.823157] (-) TimerEvent: {}
+[56.923445] (-) TimerEvent: {}
+[57.023749] (-) TimerEvent: {}
+[57.124054] (-) TimerEvent: {}
+[57.224353] (-) TimerEvent: {}
+[57.324673] (-) TimerEvent: {}
+[57.424987] (-) TimerEvent: {}
+[57.525359] (-) TimerEvent: {}
+[57.563488] (master) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable master_node\x1b[0m\n'}
+[57.625457] (-) TimerEvent: {}
+[57.725714] (-) TimerEvent: {}
+[57.744420] (master) StdoutLine: {'line': b'[100%] Built target master_node\n'}
+[57.751161] (master) CommandEnded: {'returncode': 0}
+[57.751556] (master) JobProgress: {'identifier': 'master', 'progress': 'install'}
+[57.751811] (master) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master'], 'cwd': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'altaaf-ihsan-latief', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/altaaf-ihsan-latief', 'OLDPWD': '/home/altaaf-ihsan-latief', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3351', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'altaaf-ihsan-latief', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'altaaf-ihsan-latief', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/altaaf-ihsan-latief/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:@/tmp/.ICE-unix/3207,unix/altaaf-ihsan-latief-Legion-5-Pro-16ITH6:/tmp/.ICE-unix/3207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4cdd5b9_8b65_4f0c_b8cc_c49b33479356', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.132', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/master', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/vision:/home/altaaf-ihsan-latief/Desktop/iris_fp2/install/iris_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[57.756035] (master) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[57.756337] (master) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[57.756629] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/lib/master/master_node\n'}
+[57.761592] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/launch/iris_cup.launch.py\n'}
+[57.766303] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/config/params.yaml\n'}
+[57.771127] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/ament_index/resource_index/package_run_dependencies/master\n'}
+[57.775390] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/ament_index/resource_index/parent_prefix_path/master\n'}
+[57.779728] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/environment/ament_prefix_path.sh\n'}
+[57.784214] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/environment/ament_prefix_path.dsv\n'}
+[57.788564] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/environment/path.sh\n'}
+[57.793350] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/environment/path.dsv\n'}
+[57.798136] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/local_setup.bash\n'}
+[57.803108] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/local_setup.sh\n'}
+[57.807811] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/local_setup.zsh\n'}
+[57.812427] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/local_setup.dsv\n'}
+[57.816868] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/package.dsv\n'}
+[57.821214] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/ament_index/resource_index/packages/master\n'}
+[57.825651] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/cmake/masterConfig.cmake\n'}
+[57.825756] (-) TimerEvent: {}
+[57.830611] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/cmake/masterConfig-version.cmake\n'}
+[57.835271] (master) StdoutLine: {'line': b'-- Symlinking: /home/altaaf-ihsan-latief/Desktop/iris_fp2/install/master/share/master/package.xml\n'}
+[57.840892] (master) CommandEnded: {'returncode': 0}
+[57.847329] (master) JobEnded: {'identifier': 'master', 'rc': 0}
+[57.847875] (-) EventReactorShutdown: {}

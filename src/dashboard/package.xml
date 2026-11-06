@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>dashboard</name>
+  <version>0.0.0</version>
+  <description>Base station web untuk memantau robot</description>
+  <maintainer email="altaafihsan@gmail.com">altaaf-ihsan-latief</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

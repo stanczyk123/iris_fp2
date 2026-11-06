@@ -1,0 +1,8 @@
+{
+  "package_name": "iris_msgs",
+  "non_idl_tuples": [
+    "/home/altaaf-ihsan-latief/Desktop/iris_fp2/src/iris_msgs:msg/LaneState.msg",
+    "/home/altaaf-ihsan-latief/Desktop/iris_fp2/src/iris_msgs:msg/MotorCommand.msg",
+    "/home/altaaf-ihsan-latief/Desktop/iris_fp2/src/iris_msgs:msg/Telemetry.msg"
+  ]
+}
