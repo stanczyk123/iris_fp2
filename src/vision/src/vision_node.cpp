@@ -47,7 +47,7 @@ public:
     }
 
     pub_ = create_publisher<iris_msgs::msg::LaneState>("/lane/state", 10);
-    raw_pub_  = create_publisher<sensor_msgs::msg::Image>("/lane/raw", 2);
+    raw_pub_  = create_publisher<sensor_msgs::msg::Image>("/lane/image_raw", 2);
     bev_pub_  = create_publisher<sensor_msgs::msg::Image>("/lane/bev", 2);
     mask_pub_ = create_publisher<sensor_msgs::msg::Image>("/lane/mask", 2);
     timer_ = create_wall_timer(33ms, std::bind(&VisionNode::tick, this));
@@ -87,13 +87,31 @@ private:
           continue;
         }
       }
-      std::lock_guard<std::mutex> kunci(mtx_);
-      f.copyTo(frame_baru_);
-      ada_frame_ = true;
+
+      // Kunci hanya selama menyalin frame. Kurung kurawal ini penting:
+      // tanpa itu mutex masih dipegang saat tidur di bawah, dan tick()
+      // ikut terblokir selama 33 ms tiap frame.
+      {
+        std::lock_guard<std::mutex> kunci(mtx_);
+        f.copyTo(frame_baru_);
+        ada_frame_ = true;
+      }
+
+      // Sumber langsung (webcam, RTSP) sudah mengatur lajunya sendiri.
+      // File video tidak: cap_.read() mendekode secepat CPU mampu, jadi
+      // rekaman habis dalam hitungan detik dan satu inti terpakai penuh.
+      // Tidur selama satu frame membuat pemutaran sesuai FPS aslinya.
+      if (!live_) {
+        const double fps = cap_.get(cv::CAP_PROP_FPS);
+        if (fps > 1.0) {
+          std::this_thread::sleep_for(
+            std::chrono::milliseconds(static_cast<int>(1000.0 / fps)));
+        }
+      }
     }
   }
 
-   bool bukaSumber()
+  bool bukaSumber()
   {
     hentikanGrab();
     cap_.release();
@@ -103,11 +121,18 @@ private:
       ada_frame_ = false;
     }
 
-    if (source_.size() == 1 && isdigit(source_[0])) {
+    const bool index_webcam = (source_.size() == 1 && isdigit(source_[0]));
+
+    if (index_webcam) {
       cap_.open(std::stoi(source_));      // index webcam
     } else {
       cap_.open(source_);                 // file, RTSP, atau URL lain
     }
+
+    // Sumber langsung tidak perlu diperlambat; file video perlu.
+    live_ = index_webcam ||
+            source_.rfind("rtsp://", 0) == 0 ||
+            source_.rfind("http://", 0) == 0;
 
     if (!cap_.isOpened()) {
       RCLCPP_ERROR(get_logger(), "Gagal membuka sumber: %s", source_.c_str());
@@ -116,15 +141,16 @@ private:
 
     cap_.set(cv::CAP_PROP_BUFFERSIZE, 1);
 
-    RCLCPP_INFO(get_logger(), "Sumber terbuka: %s (%dx%d)", source_.c_str(),
+    RCLCPP_INFO(get_logger(), "Sumber terbuka: %s (%dx%d) %s", source_.c_str(),
                 static_cast<int>(cap_.get(cv::CAP_PROP_FRAME_WIDTH)),
-                static_cast<int>(cap_.get(cv::CAP_PROP_FRAME_HEIGHT)));
+                static_cast<int>(cap_.get(cv::CAP_PROP_FRAME_HEIGHT)),
+                live_ ? "[langsung]" : "[file, diputar sesuai FPS]");
 
     mengambil_ = true;
     grab_thread_ = std::thread(&VisionNode::grabLoop, this);
     return true;
   }
-  
+
   void tick()
   {
     // Sumber bisa diganti dari dashboard saat node sedang jalan.
@@ -302,11 +328,6 @@ private:
       mask_pub_->publish(*cv_bridge::CvImage(msg.header, "mono8", mask).toImageMsg());
     }
 
-    cv::imshow("vision", frame);
-    cv::imshow("bev", bev);
-    cv::imshow("mask", mask);
-    cv::waitKey(1);
-
     pub_->publish(msg);
   }
 
@@ -320,6 +341,7 @@ private:
   cv::Mat frame_baru_;
   std::atomic<bool> ada_frame_{false};
   std::atomic<bool> mengambil_{false};
+  std::atomic<bool> live_{false};      // true = webcam/RTSP, false = file video
 
   rclcpp::Publisher<iris_msgs::msg::LaneState>::SharedPtr pub_;
   rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr raw_pub_, bev_pub_, mask_pub_;

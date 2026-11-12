@@ -85,7 +85,7 @@ function pasangVideo(host) {
         img.src = `${host}/stream?topic=${topic}`;
     };
 
-    pasang("img_raw", "tunggu_raw", "res_raw", "/lane/raw");
+    pasang("img_raw", "tunggu_raw", "res_raw", "/lane/image_raw");
     pasang("img_bev", "tunggu_bev", "res_bev", "/lane/bev");
     pasang("img_mask", "tunggu_mask", "res_mask", "/lane/mask");
 }
@@ -261,11 +261,11 @@ function berlangganan() {
         const jarakM = m.enc / COUNT_PER_PUTARAN * KELILING_RODA_CM / 100;
         el("jarak").textContent = jarakM.toFixed(2) + " m";
 
-        const persen = Math.max(0, Math.min(100, (m.vbat - 3.2) * 100));
+        const persen = Math.max(0, Math.min(100, (m.vbat - 9.0) / 3.6 * 100));
         const bar = el("bar_vbat");
         bar.style.width = persen + "%";
         bar.style.background =
-            m.vbat < 3.5 ? "#f87171" : (m.vbat < 3.7 ? "#facc15" : "#4ade80");
+            m.vbat < 10.5 ? "#f87171" : (m.vbat < 11.1 ? "#facc15" : "#4ade80");
     });
 
     let stateLama = "";

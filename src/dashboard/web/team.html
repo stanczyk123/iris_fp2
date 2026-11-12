@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team — MAX LAB</title>
+<link rel="icon" type="image/x-icon" href="img/logotimkita.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #000;
+    color: #fff;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  .bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 14px 32px;
+    background: #000;
+    border-bottom: 1px solid #1c1c1c;
+  }
+
+  .bar .logo img {
+    height: 34px;
+    display: block;
+  }
+
+  .bar nav {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .bar nav a {
+    color: #9a9a9a;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 8px 18px;
+    border-radius: 999px;
+    transition: color 0.25s ease, background 0.25s ease;
+  }
+
+  .bar nav a:hover { color: #fff; background: #141414; }
+  .bar nav a.aktif { color: #fff; background: #1b1b1b; }
+
+  .judul {
+    text-align: center;
+    padding: 64px 24px 12px;
+  }
+
+  .judul h1 {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+  }
+
+  .judul p {
+    margin-top: 10px;
+    color: #7e7e7e;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+
+  .ketua {
+    display: flex;
+    justify-content: center;
+    padding: 40px 24px 16px;
+  }
+
+  .ketua .kartu { max-width: 420px; }
+
+  .label {
+    text-align: center;
+    color: #6f6f6f;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    margin-bottom: 18px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 24px 80px;
+  }
+
+  .kartu {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0b0b0b;
+    border: 1px solid #1a1a1a;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .kartu:hover {
+    transform: translateY(-6px);
+    border-color: #2f8f86;
+  }
+
+  .kartu img {
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .judul h1 { font-size: 30px; }
+    .grid { padding: 20px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="bar">
+    <a class="logo" href="index.html" title="Kembali ke beranda">
+      <img src="img/logotimkita.png" alt="MAX LAB">
+    </a>
+    <nav>
+      <a href="team.html" class="aktif">Our Team</a>
+      <a href="program.html">Our Program</a>
+    </nav>
+  </header>
+
+  <section class="judul">
+    <h1>OUR TEAM</h1>
+    <p>MAX LAB — IRIS CUP 2026</p>
+  </section>
+
+  <section class="ketua">
+    <div>
+      <div class="label">KETUA TIM</div>
+      <div class="kartu"><img src="img/mechanical.jpeg" alt="Ketua Tim"></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="kartu"><img src="img/desbren.jpeg"    alt="Desbren"></div>
+    <div class="kartu"><img src="img/adfin.jpeg"      alt="Adfin"></div>
+    <div class="kartu"><img src="img/programming1.jpeg" alt="Programming"></div>
+    <div class="kartu"><img src="img/mechanical.jpeg" alt="Mechanical"></div>
+    <div class="kartu"><img src="img/electrical.jpeg" alt="Electrical"></div>
+  </section>
+
+</body>
+</html>

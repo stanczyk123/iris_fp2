@@ -65,7 +65,7 @@ public:
     telem_timeout_ms_ = declare_parameter<int>("telemetry_timeout_ms", 500);
     // Biarkan false selama ESP32 asli belum ada. Ubah ke true saat sudah
     // tersambung, supaya robot berhenti kalau WiFi putus.
-    require_telemetry_ = declare_parameter<bool>("require_telemetry", false);
+    require_telemetry_ = declare_parameter<bool>("require_telemetry", false); //ganti ke true klo udh ada esp
 
     const int loop_hz = declare_parameter<int>("loop_hz", 20);
 

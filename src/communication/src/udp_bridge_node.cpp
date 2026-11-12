@@ -11,10 +11,11 @@
 // Format paket, SEPAKATI DENGAN DIVISI ELECTRICAL:
 //   Laptop -> ESP32, 20 Hz:
 //     {"seq":1423,"servo":-12.5,"speed":180,"en":1}
-//   ESP32 -> Laptop, 10 Hz:
+//   ESP32 -> Laptop, 10 Hz: 
 //     {"seq":1423,"rpm":312,"enc":48210,"vbat":3.91}
 //
-// seq dipantulkan balik ESP32 supaya packet loss dan latency bisa diukur.
+// seq dipantulkan balik ESP32 supaya packet
+ loss dan latency bisa diukur.
 // Regulasi: ESP32 dilarang menggerakkan aktuator atau membaca sensor;
 // dia hanya meneruskan isi paket ke STM32.
 
@@ -65,7 +66,7 @@ class UdpBridgeNode : public rclcpp::Node
 public:
   UdpBridgeNode() : Node("udp_bridge_node")
   {
-    esp_ip_ = declare_parameter<std::string>("esp32_ip", "127.0.0.1");
+    esp_ip_ = declare_parameter<std::string>("esp32_ip", "127.0.0.1"); //klo udh ada esp ganti ke alamat ip esp32 (tanya qolbi)
     esp_port_ = declare_parameter<int>("esp32_port", 4210);
     listen_port_ = declare_parameter<int>("listen_port", 4211);
 
