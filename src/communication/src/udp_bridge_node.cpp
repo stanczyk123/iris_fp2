@@ -11,7 +11,7 @@
 // Format paket, SEPAKATI DENGAN DIVISI ELECTRICAL:
 //   Laptop -> ESP32, 20 Hz:
 //     {"seq":1423,"servo":-12.5,"speed":300,"en":1,"mode":1}
-//       servo : derajat, + = KANAN, batas STM32 +/-30
+//       servo : derajat, + = KANAN, batas STM32 +/-27 (SG90, 14 Nov)
 //       speed : mode 1 = target rpm roda (PID STM32, maks 500)
 //               mode 0 = duty 0..255 (tanpa PID, cara lama)
 //   ESP32 -> Laptop, 20 Hz:

@@ -14,7 +14,7 @@
 // DISESUAIKAN DENGAN KALIBRASI ELEKTRIKAL 13 Nov 2026:
 //   - Arah: servo + = KANAN, speed + = MAJU (sudah cocok dengan error vision:
 //     garis di kanan tengah -> error + -> servo + -> belok kanan).
-//   - max_angle 30 = batas servo STM32 (cfg_servo_limit_deg 30).
+//   - max_angle 27 = batas servo STM32 (SG90 baru 14 Nov, cfg_servo_limit_deg 27).
 //   - speed sekarang dalam RPM RODA (udp_bridge speed_is_rpm:=true), PID di STM32
 //     menjaga rpm walau baterai turun. Batas aman 500 rpm (duty +/-90 %).
 //     Konversi dari nilai lama (duty 0..255, roda 65 mm, maks 524 rpm):
@@ -64,7 +64,7 @@ public:
   MasterNode() : Node("master_node")
   {
     kp_ = declare_parameter<double>("kp", 25.0);
-    max_angle_ = declare_parameter<double>("max_angle", 30.0);
+    max_angle_ = declare_parameter<double>("max_angle", 27.0);
     deadband_ = declare_parameter<double>("deadband", 0.02);
 
     // Satuan: rpm roda (lihat catatan di atas). 1 m/s ~ 294 rpm untuk roda 65 mm.

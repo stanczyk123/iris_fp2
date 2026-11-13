@@ -532,12 +532,12 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 55,
-			"id" : "iris_msgs__cpp::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 11,
 			"id" : "iris_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 55,
+			"id" : "iris_msgs__cpp::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "iris_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
