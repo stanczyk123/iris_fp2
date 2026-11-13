@@ -3,7 +3,7 @@
 
 vision_node:
   ros__parameters:
-    source: "/home/altaaf-ihsan-latief/Downloads/vidio_jalurIrisCup.mp4"
+    source: "0" #/home/altaaf-ihsan-latief/Downloads/vidio_jalurIrisCup.mp4
     hsv_lower: [15, 45, 60]
     hsv_upper: [40, 255, 255]
     bev_top_y: 0.38
@@ -13,23 +13,26 @@ vision_node:
     bev_width: 400
     bev_height: 600
     min_area: 60.0
+    tampilkan_jendela: false #kalau mau nyalain imshow bikin jdi true
 
 udp_bridge_node:
   ros__parameters:
-    esp32_ip: "10.53.224.148" 
+    esp32_ip: "auto" 
     esp32_port: 4210
     listen_port: 4211
+    speed_is_rpm: true
+    max_speed: 500
 
 master_node:
   ros__parameters:
     loop_hz: 20
-    kp: 25.0
+    kp: 15.0
     max_angle: 30.0
     deadband: 0.02
-    cruise_speed: 150
-    corner_speed: 110
-    min_speed: 90
+    cruise_speed: 300
+    corner_speed: 220
+    min_speed: 180
     grace_frames: 15
     lane_timeout_ms: 500
     telemetry_timeout_ms: 500
-    require_telemetry: false
+    require_telemetry: true

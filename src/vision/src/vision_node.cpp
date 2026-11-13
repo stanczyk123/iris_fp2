@@ -5,6 +5,7 @@
 #include <vector>
 #include <cmath>
 #include <cstdio>
+#include <cstdlib>
 #include <sensor_msgs/msg/image.hpp>
 #include <mutex>
 #include <thread>
@@ -41,6 +42,7 @@ public:
     declare_parameter<int>("bev_width", 400);
     declare_parameter<int>("bev_height", 600);
     declare_parameter<double>("min_area", 120.0);
+    declare_parameter<bool>("tampilkan_jendela", false);
 
     if (!bukaSumber()) {
       throw std::runtime_error("sumber kamera gagal dibuka");
@@ -122,29 +124,72 @@ private:
     }
 
     const bool index_webcam = (source_.size() == 1 && isdigit(source_[0]));
+    const bool rtsp = (source_.rfind("rtsp://", 0) == 0);
 
     if (index_webcam) {
-      cap_.open(std::stoi(source_));      // index webcam
+      cap_.open(std::stoi(source_), cv::CAP_V4L2);   // index webcam
+    } else if (rtsp) {
+      // Backend TIDAK boleh dipilih otomatis untuk RTSP. Kalau OpenCV
+      // memilih GStreamer sendiri, ia merangkai pipeline dengan rtspsrc
+      // bawaan yang latency-nya 2000 ms — itu sumber delay dua detik.
+      //
+      // Coba FFmpeg dulu; kalau OpenCV-nya tidak dibangun dengan FFmpeg,
+      // jatuh ke GStreamer dengan pipeline yang kita tulis sendiri,
+      // latency=0 dan hanya menyimpan frame terbaru.
+      //
+      // Opsi di bawah harus terpasang SEBELUM open(), karena FFmpeg
+      // membacanya saat membuka stream. Ditaruh di kode, bukan di export,
+      // supaya tidak bergantung pada terminal mana yang dipakai.
+      //   nobuffer, low_delay  : jangan menyangga demi kehalusan
+      //   max_delay 0          : jangan menunggu paket yang telat
+      //   reorder_queue_size 0 : jangan menyusun ulang urutan paket
+      //
+      // rtsp_transport sengaja TIDAK dipaksa. Sebagian server RTSP di HP
+      // hanya melayani TCP, dan memaksa udp membuat open() gagal total.
+      // Dibiarkan kosong, FFmpeg menegosiasikannya sendiri.
+      setenv("OPENCV_FFMPEG_CAPTURE_OPTIONS",
+             "fflags;nobuffer|flags;low_delay"
+             "|max_delay;0|reorder_queue_size;0",
+             1);
+      cap_.open(source_, cv::CAP_FFMPEG);
+
+      if (!cap_.isOpened()) {
+        RCLCPP_WARN(get_logger(),
+                    "FFmpeg tidak bisa membuka RTSP, coba GStreamer latency=0");
+        const std::string pipa =
+            "rtspsrc location=" + source_ +
+            " latency=0 drop-on-latency=true protocols=udp"
+            " ! rtph264depay ! h264parse ! avdec_h264"
+            " ! videoconvert ! video/x-raw,format=BGR"
+            " ! appsink drop=true max-buffers=1 sync=false";
+        cap_.open(pipa, cv::CAP_GSTREAMER);
+      }
     } else {
-      cap_.open(source_);                 // file, RTSP, atau URL lain
+      cap_.open(source_);                 // file atau URL lain
     }
 
     // Sumber langsung tidak perlu diperlambat; file video perlu.
-    live_ = index_webcam ||
-            source_.rfind("rtsp://", 0) == 0 ||
-            source_.rfind("http://", 0) == 0;
+    live_ = index_webcam || rtsp || source_.rfind("http://", 0) == 0;
 
     if (!cap_.isOpened()) {
       RCLCPP_ERROR(get_logger(), "Gagal membuka sumber: %s", source_.c_str());
       return false;
     }
 
+    // Hanya berpengaruh pada V4L2 dan DirectShow. Diabaikan FFmpeg dan
+    // GStreamer, jadi jangan diandalkan untuk menekan latensi RTSP.
     cap_.set(cv::CAP_PROP_BUFFERSIZE, 1);
 
-    RCLCPP_INFO(get_logger(), "Sumber terbuka: %s (%dx%d) %s", source_.c_str(),
+    RCLCPP_INFO(get_logger(), "Sumber terbuka: %s (%dx%d) %s via %s",
+                source_.c_str(),
                 static_cast<int>(cap_.get(cv::CAP_PROP_FRAME_WIDTH)),
                 static_cast<int>(cap_.get(cv::CAP_PROP_FRAME_HEIGHT)),
-                live_ ? "[langsung]" : "[file, diputar sesuai FPS]");
+                live_ ? "[langsung]" : "[file, diputar sesuai FPS]",
+                cap_.getBackendName().c_str());
+
+    // Hitungan FPS dimulai dari nol setiap kali sumber diganti.
+    t_sebelumnya_ = rclcpp::Time(0, 0, RCL_ROS_TIME);
+    fps_halus_ = 0.0f;
 
     mengambil_ = true;
     grab_thread_ = std::thread(&VisionNode::grabLoop, this);
@@ -173,6 +218,20 @@ private:
       frame_baru_.copyTo(frame);
       ada_frame_ = false;
     }
+
+    // ---------- Laju pemrosesan ----------
+    // Dihitung di sini, bukan di dashboard: angka ini laju frame yang
+    // benar-benar diolah, bukan laju gambar yang digambar browser.
+    // Rata-rata bergerak supaya tidak melompat tiap frame.
+    const rclcpp::Time t_sekarang = now();
+    if (t_sebelumnya_.nanoseconds() > 0) {
+      const double dt = (t_sekarang - t_sebelumnya_).seconds();
+      if (dt > 1e-6) {
+        const float f = static_cast<float>(1.0 / dt);
+        fps_halus_ = (fps_halus_ <= 0.0f) ? f : (0.9f * fps_halus_ + 0.1f * f);
+      }
+    }
+    t_sebelumnya_ = t_sekarang;
 
     const double min_area = get_parameter("min_area").as_double();
 
@@ -310,11 +369,18 @@ private:
                cv::Scalar(120, 220, 120), 2);
     }
 
-    char info[96];
-    std::snprintf(info, sizeof(info), "err %+.3f  head %+.1f  blobs %d",
-                  msg.error, msg.heading, msg.n_blobs);
+    char info[128];
+    std::snprintf(info, sizeof(info), "err %+.3f  head %+.1f  blobs %d  fps %.1f",
+                  msg.error, msg.heading, msg.n_blobs, fps_halus_);
     cv::putText(bev, info, {10, 24}, cv::FONT_HERSHEY_SIMPLEX, 0.5,
                 cv::Scalar(240, 240, 240), 1, cv::LINE_AA);
+
+    // FPS juga ditempel di frame mentah, supaya terbaca walau hanya
+    // jendela "raw" yang dibuka saat mengukur latensi.
+    char fps_teks[32];
+    std::snprintf(fps_teks, sizeof(fps_teks), "fps %.1f", fps_halus_);
+    cv::putText(frame, fps_teks, {10, 28}, cv::FONT_HERSHEY_SIMPLEX, 0.7,
+                cv::Scalar(240, 240, 240), 2, cv::LINE_AA);
 
     // Encode hanya kalau ada yang menonton, supaya tidak membuang CPU
     // saat dashboard tidak dibuka.
@@ -328,11 +394,22 @@ private:
       mask_pub_->publish(*cv_bridge::CvImage(msg.header, "mono8", mask).toImageMsg());
     }
 
+    // Jendela OpenCV hanya untuk debug dan pengukuran latensi.
+    // waitKey(1) memakan 5-15 ms tiap frame, jadi matikan saat lomba.
+    if (get_parameter("tampilkan_jendela").as_bool()) {
+      cv::imshow("raw", frame);
+      cv::imshow("bev", bev);
+      cv::imshow("mask", mask);
+      cv::waitKey(1);
+    }
+
     pub_->publish(msg);
   }
 
   std::string source_;
   float last_heading_{0.0f};
+  rclcpp::Time t_sebelumnya_{0, 0, RCL_ROS_TIME};
+  float fps_halus_{0.0f};
   cv::VideoCapture cap_;
 
   // Slot satu frame yang terus ditimpa thread pengambil.

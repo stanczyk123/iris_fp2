@@ -10,12 +10,24 @@
 //
 // Format paket, SEPAKATI DENGAN DIVISI ELECTRICAL:
 //   Laptop -> ESP32, 20 Hz:
-//     {"seq":1423,"servo":-12.5,"speed":180,"en":1}
-//   ESP32 -> Laptop, 10 Hz: 
-//     {"seq":1423,"rpm":312,"enc":48210,"vbat":3.91}
+//     {"seq":1423,"servo":-12.5,"speed":300,"en":1,"mode":1}
+//       servo : derajat, + = KANAN, batas STM32 +/-30
+//       speed : mode 1 = target rpm roda (PID STM32, maks 500)
+//               mode 0 = duty 0..255 (tanpa PID, cara lama)
+//   ESP32 -> Laptop, 20 Hz:
+//     {"seq":1423,"rpm":312,"enc":48210,"vbat":11.740,"flags":0}
+//       vbat = tegangan pack 3S (9,6..12,6 V), bukan per sel
+//   ESP32 -> broadcast :4211 tiap 1 s saat belum dikendalikan (penemuan IP):
+//     {"iris_esp32":1,"ip":"172.26.235.148"}
 //
-// seq dipantulkan balik ESP32 supaya packet
- loss dan latency bisa diukur.
+// DISESUAIKAN ELEKTRIKAL 13 Nov 2026:
+//   [U1] esp32_ip default "auto": IP ESP32 dipelajari dari beacon, jadi tidak
+//        perlu edit IP saat hotspot memberi IP baru. Isi IP manual tetap bisa.
+//   [U2] speed dikirim sebagai rpm (parameter speed_is_rpm, default true),
+//        dibatasi max_speed (500 = hasil kalibrasi STM32).
+//   [U3] Komentar yang terpotong (baris "loss dan latency") diperbaiki.
+//
+// seq dipantulkan balik ESP32 supaya packet loss dan latency bisa diukur.
 // Regulasi: ESP32 dilarang menggerakkan aktuator atau membaca sensor;
 // dia hanya meneruskan isi paket ke STM32.
 
@@ -31,6 +43,8 @@
 #include <cstdio>
 #include <cstring>
 #include <memory>
+#include <mutex>
+#include <stdexcept>
 #include <string>
 #include <thread>
 
@@ -66,9 +80,14 @@ class UdpBridgeNode : public rclcpp::Node
 public:
   UdpBridgeNode() : Node("udp_bridge_node")
   {
-    esp_ip_ = declare_parameter<std::string>("esp32_ip", "127.0.0.1"); //klo udh ada esp ganti ke alamat ip esp32 (tanya qolbi)
+    // [U1] "auto" = tunggu beacon ESP32. Isi IP (mis. "172.26.235.148") untuk manual.
+    esp_ip_ = declare_parameter<std::string>("esp32_ip", "auto");
     esp_port_ = declare_parameter<int>("esp32_port", 4210);
     listen_port_ = declare_parameter<int>("listen_port", 4211);
+    // [U2] true = speed adalah target rpm roda (PID di STM32). false = duty 0..255.
+    speed_is_rpm_ = declare_parameter<bool>("speed_is_rpm", true);
+    // [U2] batas speed. rpm: 500 (cfg_max_rpm STM32). duty: 255.
+    max_speed_ = declare_parameter<int>("max_speed", speed_is_rpm_ ? 500 : 255);
 
     if (!openSocket()) {
       throw std::runtime_error("socket UDP gagal disiapkan");
@@ -84,21 +103,26 @@ public:
     running_ = true;
     rx_thread_ = std::thread(&UdpBridgeNode::rxLoop, this);
 
-    RCLCPP_INFO(get_logger(), "udp_bridge_node jalan -> %s:%d, dengar :%d",
-                esp_ip_.c_str(), esp_port_, listen_port_);
+    RCLCPP_INFO(get_logger(), "udp_bridge_node jalan -> %s:%d, dengar :%d, speed=%s maks %d",
+                esp_ip_.c_str(), esp_port_, listen_port_,
+                speed_is_rpm_ ? "rpm" : "duty", max_speed_);
+    if (esp_ip_ == "auto") {
+      RCLCPP_INFO(get_logger(), "Menunggu beacon ESP32 di port %d ...", listen_port_);
+    }
   }
 
   ~UdpBridgeNode() override
   {
     // Kirim perintah berhenti sebelum menutup socket, supaya robot tidak
     // melanjutkan perintah terakhir saat program ditutup.
-    if (sock_ >= 0) {
+    sockaddr_in d{};
+    if (sock_ >= 0 && getDest(d)) {
       char buf[128];
       const int n = std::snprintf(
         buf, sizeof(buf),
         "{\"seq\":%u,\"servo\":0.00,\"speed\":0,\"en\":0}", seq_ + 1);
       ::sendto(sock_, buf, static_cast<size_t>(n), 0,
-               reinterpret_cast<sockaddr *>(&dest_), sizeof(dest_));
+               reinterpret_cast<sockaddr *>(&d), sizeof(d));
     }
 
     running_ = false;
@@ -142,6 +166,9 @@ private:
       return false;
     }
 
+    if (esp_ip_ == "auto") {               // [U1] tujuan diisi saat beacon datang
+      return true;
+    }
     dest_.sin_family = AF_INET;
     dest_.sin_port = htons(static_cast<uint16_t>(esp_port_));
     if (::inet_pton(AF_INET, esp_ip_.c_str(), &dest_.sin_addr) != 1) {
@@ -150,20 +177,39 @@ private:
       sock_ = -1;
       return false;
     }
+    have_dest_ = true;
+    return true;
+  }
+
+  // [U1] Salin alamat tujuan dengan aman (ditulis thread rx, dibaca callback).
+  bool getDest(sockaddr_in & out)
+  {
+    std::lock_guard<std::mutex> lock(dest_mtx_);
+    if (!have_dest_) {
+      return false;
+    }
+    out = dest_;
     return true;
   }
 
   void onCmd(const iris_msgs::msg::MotorCommand::SharedPtr cmd)
   {
+    sockaddr_in d{};
+    if (!getDest(d)) {
+      RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 2000,
+                           "Belum tahu IP ESP32 (menunggu beacon). Cek WiFi sama "
+                           "dengan ESP32, atau isi -p esp32_ip:=<IP>");
+      return;
+    }
     char buf[160];
     const int n = std::snprintf(
       buf, sizeof(buf),
-      "{\"seq\":%u,\"servo\":%.2f,\"speed\":%d,\"en\":%d}",
-      ++seq_, cmd->servo, std::clamp<int>(cmd->speed, 0, 255),
-      cmd->enable ? 1 : 0);
+      "{\"seq\":%u,\"servo\":%.2f,\"speed\":%d,\"en\":%d,\"mode\":%d}",
+      ++seq_, cmd->servo, std::clamp<int>(cmd->speed, 0, max_speed_),
+      cmd->enable ? 1 : 0, speed_is_rpm_ ? 1 : 0);
 
     if (::sendto(sock_, buf, static_cast<size_t>(n), 0,
-                 reinterpret_cast<sockaddr *>(&dest_), sizeof(dest_)) < 0) {
+                 reinterpret_cast<sockaddr *>(&d), sizeof(d)) < 0) {
       RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 2000,
                            "sendto gagal: %s", std::strerror(errno));
     } else {
@@ -175,13 +221,32 @@ private:
   {
     char buf[512];
     while (running_) {
+      sockaddr_in src{};
+      socklen_t src_len = sizeof(src);
       const ssize_t n = ::recvfrom(sock_, buf, sizeof(buf) - 1, 0,
-                                   nullptr, nullptr);
+                                   reinterpret_cast<sockaddr *>(&src), &src_len);
       if (n <= 0) {
         continue;   // timeout biasa, cek running_ lalu ulangi
       }
       buf[n] = '\0';
       const std::string raw(buf);
+
+      // [U1] Beacon ESP32: pelajari IP-nya (hanya mode "auto").
+      if (raw.find("\"iris_esp32\"") != std::string::npos) {
+        if (esp_ip_ == "auto") {
+          std::lock_guard<std::mutex> lock(dest_mtx_);
+          const bool baru = !have_dest_ || dest_.sin_addr.s_addr != src.sin_addr.s_addr;
+          dest_ = src;
+          dest_.sin_port = htons(static_cast<uint16_t>(esp_port_));
+          have_dest_ = true;
+          if (baru) {
+            char ip[INET_ADDRSTRLEN];
+            ::inet_ntop(AF_INET, &src.sin_addr, ip, sizeof(ip));
+            RCLCPP_INFO(get_logger(), "ESP32 ditemukan di %s:%d", ip, esp_port_);
+          }
+        }
+        continue;
+      }
 
       // Paket rusak dibuang diam-diam, bukan bikin node mati di tengah lomba.
       double seq = 0.0, rpm = 0.0, enc = 0.0, vbat = 0.0;
@@ -219,6 +284,10 @@ private:
   int listen_port_{0};
   int sock_{-1};
   sockaddr_in dest_{};
+  bool have_dest_{false};
+  std::mutex dest_mtx_;
+  bool speed_is_rpm_{true};
+  int max_speed_{500};
 
   unsigned seq_{0};
   unsigned sent_{0};

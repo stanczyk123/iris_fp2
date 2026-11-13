@@ -10,6 +10,17 @@
 // Terbit:
 //   /robot/cmd         iris_msgs/MotorCommand
 //   /robot/state       std_msgs/String       (untuk dashboard)
+//
+// DISESUAIKAN DENGAN KALIBRASI ELEKTRIKAL 13 Nov 2026:
+//   - Arah: servo + = KANAN, speed + = MAJU (sudah cocok dengan error vision:
+//     garis di kanan tengah -> error + -> servo + -> belok kanan).
+//   - max_angle 30 = batas servo STM32 (cfg_servo_limit_deg 30).
+//   - speed sekarang dalam RPM RODA (udp_bridge speed_is_rpm:=true), PID di STM32
+//     menjaga rpm walau baterai turun. Batas aman 500 rpm (duty +/-90 %).
+//     Konversi dari nilai lama (duty 0..255, roda 65 mm, maks 524 rpm):
+//       cruise 150 -> ~300 rpm (~1,0 m/s), corner 110 -> ~220 rpm, min 90 -> ~180 rpm
+//     Kalau udp_bridge dipakai dengan speed_is_rpm:=false, kembalikan ke 150/110/90.
+//   - require_telemetry true: ESP32 sudah ada, robot berhenti kalau link mati.
 
 #include <algorithm>
 #include <chrono>
@@ -56,16 +67,17 @@ public:
     max_angle_ = declare_parameter<double>("max_angle", 30.0);
     deadband_ = declare_parameter<double>("deadband", 0.02);
 
-    cruise_ = declare_parameter<int>("cruise_speed", 150);
-    corner_ = declare_parameter<int>("corner_speed", 110);
-    min_speed_ = declare_parameter<int>("min_speed", 90);
+    // Satuan: rpm roda (lihat catatan di atas). 1 m/s ~ 294 rpm untuk roda 65 mm.
+    cruise_ = declare_parameter<int>("cruise_speed", 300);
+    corner_ = declare_parameter<int>("corner_speed", 220);
+    min_speed_ = declare_parameter<int>("min_speed", 180);
 
     grace_frames_ = declare_parameter<int>("grace_frames", 15);
     lane_timeout_ms_ = declare_parameter<int>("lane_timeout_ms", 500);
     telem_timeout_ms_ = declare_parameter<int>("telemetry_timeout_ms", 500);
-    // Biarkan false selama ESP32 asli belum ada. Ubah ke true saat sudah
-    // tersambung, supaya robot berhenti kalau WiFi putus.
-    require_telemetry_ = declare_parameter<bool>("require_telemetry", false); //ganti ke true klo udh ada esp
+    // ESP32 sudah tersambung (telemetri 20 Hz): robot berhenti kalau WiFi putus.
+    // Set false hanya saat tes vision tanpa robot.
+    require_telemetry_ = declare_parameter<bool>("require_telemetry", true);
 
     const int loop_hz = declare_parameter<int>("loop_hz", 20);
 
