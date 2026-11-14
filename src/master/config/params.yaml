@@ -1,9 +1,8 @@
 # Semua angka tuning ada di sini. Jangan menulis angka langsung di kode node.
 # Nama di baris pertama tiap blok HARUS sama dengan nama node-nya.
-
 vision_node:
   ros__parameters:
-    source: "rtsp://admin:katsudon1@192.168.51.250:8554/live" #/home/altaaf-ihsan-latief/Downloads/vidio_jalurIrisCup.mp4
+    source: "rtsp://admin:katsudon1@192.168.51.250:8554/live"
     hsv_lower: [15, 45, 60]
     hsv_upper: [40, 255, 255]
     bev_top_y: 0.38
@@ -13,7 +12,8 @@ vision_node:
     bev_width: 400
     bev_height: 600
     min_area: 1200.0
-    tampilkan_jendela: false #kalau mau nyalain imshow bikin jdi true
+    bev_offset_x: 0.0
+    tampilkan_jendela: false
 
 udp_bridge_node:
   ros__parameters:
@@ -27,7 +27,7 @@ master_node:
   ros__parameters:
     loop_hz: 20
     kp: 12.0 #15.0
-    max_angle: 27.0 #30.0
+    max_angle: 20.0 #30.0
     deadband: 0.02
     cruise_speed: 90 #300
     corner_speed: 80 #150
