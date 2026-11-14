@@ -1,9 +1,0 @@
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/uninstall.dir
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/dashboard_uninstall.dir
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/test.dir
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/edit_cache.dir
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/rebuild_cache.dir
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/list_install_components.dir
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/install.dir
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/install/local.dir
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/dashboard/CMakeFiles/install/strip.dir

@@ -1,6 +1,0 @@
-source;share/dashboard/hook/cmake_prefix_path.dsv
-source;share/dashboard/hook/cmake_prefix_path.sh
-source;share/dashboard/local_setup.bash
-source;share/dashboard/local_setup.dsv
-source;share/dashboard/local_setup.sh
-source;share/dashboard/local_setup.zsh

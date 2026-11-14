@@ -3,7 +3,7 @@
 
 vision_node:
   ros__parameters:
-    source: "0" #/home/altaaf-ihsan-latief/Downloads/vidio_jalurIrisCup.mp4
+    source: "rtsp://admin:katsudon1@10.16.172.1:8554/live" #/home/altaaf-ihsan-latief/Downloads/vidio_jalurIrisCup.mp4
     hsv_lower: [15, 45, 60]
     hsv_upper: [40, 255, 255]
     bev_top_y: 0.38
@@ -12,7 +12,7 @@ vision_node:
     bev_bottom_width: 1.4
     bev_width: 400
     bev_height: 600
-    min_area: 60.0
+    min_area: 1200.0
     tampilkan_jendela: false #kalau mau nyalain imshow bikin jdi true
 
 udp_bridge_node:
@@ -26,12 +26,12 @@ udp_bridge_node:
 master_node:
   ros__parameters:
     loop_hz: 20
-    kp: 15.0
-    max_angle: 30.0
+    kp: 12.0 #15.0
+    max_angle: 27.0 #30.0
     deadband: 0.02
-    cruise_speed: 300
-    corner_speed: 220
-    min_speed: 180
+    cruise_speed: 180 #300
+    corner_speed: 150 #150
+    min_speed: 120 #120
     grace_frames: 15
     lane_timeout_ms: 500
     telemetry_timeout_ms: 500

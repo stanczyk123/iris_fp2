@@ -1,1 +1,0 @@
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs/rosidl_generator_c/iris_msgs/msg/detail/telemetry__type_support.h

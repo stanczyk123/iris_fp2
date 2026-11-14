@@ -1,6 +1,0 @@
-msg/LaneState.idl
-msg/LaneState.msg
-msg/MotorCommand.idl
-msg/MotorCommand.msg
-msg/Telemetry.idl
-msg/Telemetry.msg

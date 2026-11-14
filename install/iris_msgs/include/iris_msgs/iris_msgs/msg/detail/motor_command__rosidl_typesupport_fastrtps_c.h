@@ -1,1 +1,0 @@
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/build/iris_msgs/rosidl_typesupport_fastrtps_c/iris_msgs/msg/detail/motor_command__rosidl_typesupport_fastrtps_c.h

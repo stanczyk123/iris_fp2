@@ -1,1 +1,0 @@
-/home/altaaf-ihsan-latief/Desktop/iris_fp2/src/master/launch/iris_cup.launch.py
