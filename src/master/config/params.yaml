@@ -29,9 +29,9 @@ master_node:
     kp: 12.0 #15.0
     max_angle: 27.0 #30.0
     deadband: 0.02
-    cruise_speed: 180 #300
-    corner_speed: 150 #150
-    min_speed: 120 #120
+    cruise_speed: 90 #300
+    corner_speed: 80 #150
+    min_speed: 70 #120
     grace_frames: 15
     lane_timeout_ms: 500
     telemetry_timeout_ms: 500
